@@ -18,4 +18,15 @@ addtextbox.addEventListener("keypress", function(e){
 
 
 
-// todo -     ADD a toggle function that disables and enables an <input type text> inside #left
+// todo -     	ADD a toggle function that disables and enables an <input type text> inside #left
+//new todo - 	REMOVE ALL textbox, add a function that creates a new textbox containing the value of the 
+//				[addtextbox] when [enter key] is pressed
+
+
+
+function addItem() {
+    var btn = document.createElement("div");
+    var t = document.createTextNode("asdf");
+    btn.appendChild(t);
+    document.body.appendChild(btn);
+}
