@@ -13,12 +13,11 @@ body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-backg
 		 padding-left: 5%;
 		 padding-right:5%;
 		 margin-right:10px;
-		 
+				 
 		 
 		 width:49%;
 		 border-radius: 15px;
 		 box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-		 
 
 		}
 
@@ -31,6 +30,7 @@ body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-backg
 		 width:49%;
 		border-radius: 15px;
 		box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
+
 	}
 
 
@@ -45,3 +45,7 @@ body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-backg
 body	{ background-color: #ddd; }
 
 .form-control { height:50px; }
+
+#addtodo { width:90%; margin-right: 0px; }
+
+#addbtn {float-right;}
