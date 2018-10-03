@@ -8,73 +8,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css">
-        .registrationForm {
-            width: 404px;
-            margin: 50px auto;
-        }
-        .registrationForm form {
-            margin-bottom: 15px;
-            background: #f7f7f7;
-            box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-        }
-        .registrationForm h2 {
-            margin: 0 0 15px;
-        }
-        .form-control, .btn {
-            min-height: 38px;
-            border-radius: 2px;
-        }
-        .btn {
-            font-size: 15px;
-            font-weight: bold;
-        }
-        body{
-            background-color: #ddd;
-        }
-        form{
-            border-radius: 25px;
-        }
-        .form-control, .btn{
-            border-radius: 10px;
-            text-align: center;
-        }
-        .btn {
-            background-color: #cceeff;
-            font-size: 12px;
-            color: #286090;
-            border-width: 0px;
-        }
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
 
-    </style>
+
+
 
 </head>
-<body>
+<body onload="document.getElementById('uname').focus();">
 <div class="content">
 
     <div class="background"></div>
 
     <div class="registrationForm">
-        <form action="" method="post">
+        <form action="" method="post" onsubmit="return subValidation(this)">
             <h2 class="text-center">Registration</h2>
             <div class="form-group">
-                <input class="form-control" placeholder="Username" required="required" type="text">
+                <input class="form-control" placeholder="Username" maxlength="16" required="You have to fill this field." pattern="[A-Za-z0-9_.]{8,16}" type="text" id="uname">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Lastname" pattern="/[A-Za-z ]/g{8,16}" maxlength="16" title=" Alphabetic only, 'A-Z, a-z'" required="required" type="text">
+                <input class="form-control" placeholder="Lastname" pattern="[A-Za-z ]{8,16}" maxlength="16" title=" Alphabetic only, 'A-Z, a-z'"  type="text">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Firstname" pattern="/[A-Za-z ]/g{8,16}" required="required" type="text">
+                <input class="form-control" placeholder="Firstname" pattern="[A-Za-z ]{8,16}"  type="text">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Password" required="required" type="password">
+                <input class="form-control" placeholder="Password" type="password" id="pass">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Re-type Password" required="required" type="password">
+                <input class="form-control" placeholder="Re-type Password" type="password" id="rpass">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Email Address" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" type="email">
+                <input class="form-control" placeholder="Email Address"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" type="email">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">
@@ -87,6 +51,28 @@
                 <span class="text-center"><a href="login_form.html"><< Back</a></span>
                <!-- <a href="#" class="pull-right text-center">Forgot Password?</a> -->
             </div>
+
+              <script>
+
+        function subValidation() {
+            var pass1 = document.getElementById("pass").value;
+            var pass2 = document.getElementById("rpass").value;
+            if(pass1 == "" || pass2 == ""){
+                alert("Please fill the password field");
+                document.getElementById('pass').focus();
+                return false;
+
+            }
+            else if (pass1 != pass2) {
+                alert('Password are not the same.');
+                return false;
+            }
+            else {
+                alert('Passwords are match.');
+                }
+            }
+            </script>
+      
         </form>
 
     </div>
