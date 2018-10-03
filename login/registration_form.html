@@ -6,10 +6,58 @@
     <link rel="stylesheet" type="text/css" href="">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <style type="text/css">
+          .btn-default{
+            border-width: 0px;
+        }
+         .btn:hover{
+            background-color: #c5d6ef;
+        }
+        </style>
+    <!-- <style type="text/css">
+        .formField {
+            width: 404px;
+            margin: 50px auto;
+        }
+        .formField form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        .formField h2 {
+            margin: 0 0 15px;
+        }
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        body{
+            background-color: #ddd;
+        }
+        form{
+            border-radius: 25px;
+        }
+        .form-control, .btn{
+            border-radius: 10px;
+            text-align: center;
+        }
+        .btn {
+            background-color: #cceeff;
+            font-size: 12px;
+            color: #286090;
+            border-width: 0px;
+        }
 
+    </style>
+ -->
 
 
 
@@ -19,29 +67,29 @@
 
     <div class="background"></div>
 
-    <div class="registrationForm">
+    <div class="formField">
         <form action="" method="post" onsubmit="return subValidation(this)">
             <h2 class="text-center">Registration</h2>
             <div class="form-group">
-                <input class="form-control" placeholder="Username" maxlength="16" required="You have to fill this field." pattern="[A-Za-z0-9_.]{8,16}" type="text" id="uname">
+                <input class="form-control" placeholder="Username" maxlength="16" required="You have to fill this field." pattern="[A-Za-z0-9_.]{6,16}" type="text" id="uname" required="">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Lastname" pattern="[A-Za-z ]{8,16}" maxlength="16" title=" Alphabetic only, 'A-Z, a-z'"  type="text">
+                <input class="form-control" placeholder="Lastname" pattern="[A-Za-z ]{3,16}" maxlength="16" title=" Alphabetic only, 'A-Z, a-z'"  type="text" required="">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Firstname" pattern="[A-Za-z ]{8,16}"  type="text">
+                <input class="form-control" placeholder="Firstname" pattern="[A-Za-z ]{3,16}"  type="text" required="">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Password" type="password" id="pass">
+                <input class="form-control" placeholder="Password" type="password" id="pass" required="">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Re-type Password" type="password" id="rpass">
+                <input class="form-control" placeholder="Re-type Password" type="password" id="rpass" required="">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Email Address"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" type="email">
+                <input class="form-control" placeholder="Email Address"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" type="email" required="">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">
+                <button type="submit" class="btn btn-default btn-block">
 
                     Register
 
