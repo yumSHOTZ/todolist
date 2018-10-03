@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Todo List - Login</title>
+    <title>Todo List - Registration</title>
     <link rel="stylesheet" type="text/css" href="loginCss.css">
     <link rel="stylesheet" type="text/css" href="">
 
@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
         .registrationForm {
-            width: 340px;
+            width: 404px;
             margin: 50px auto;
         }
         .registrationForm form {
@@ -38,6 +38,7 @@
         }
         .form-control, .btn{
             border-radius: 10px;
+            text-align: center;
         }
         .btn {
             background-color: #cceeff;
@@ -56,15 +57,15 @@
 
     <div class="registrationForm">
         <form action="" method="post">
-            <h2 class="text-center">Log in</h2>
+            <h2 class="text-center">Registration</h2>
             <div class="form-group">
                 <input class="form-control" placeholder="Username" required="required" type="text">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Lastname" required="required" type="text">
+                <input class="form-control" placeholder="Lastname" pattern="/[A-Za-z ]/g{8,16}" maxlength="16" title=" Alphabetic only, 'A-Z, a-z'" required="required" type="text">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Firstname" required="required" type="text">
+                <input class="form-control" placeholder="Firstname" pattern="/[A-Za-z ]/g{8,16}" required="required" type="text">
             </div>
             <div class="form-group">
                 <input class="form-control" placeholder="Password" required="required" type="password">
@@ -73,7 +74,7 @@
                 <input class="form-control" placeholder="Re-type Password" required="required" type="password">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Email Address" required="required" type="email">
+                <input class="form-control" placeholder="Email Address" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" type="email">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">
