@@ -34,7 +34,8 @@ body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-backg
 
 #loggedUser{ text-align: right; }
 body	{ background-color: #ddd; }
-.form-control { height:50px; }
+.form-control { height:50px;
+				display: inline }
 #addtodo { width:85%; margin-right: 0px; }
 input {margin-bottom:10px ;}
 
@@ -45,4 +46,17 @@ input {margin-bottom:10px ;}
 #addbtn{ 	margin-left:10px;
 			height:50px;
 			background-color: #e6ebf2;
+}
+
+
+#specialbutton {
+			margin-left:10px;
+			height:50px;
+			background-color: #e6ebf2;
+
+}
+
+
+#specialtextbox {
+	width:85%;
 }
