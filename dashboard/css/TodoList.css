@@ -1,8 +1,3 @@
-/*.textTodo { margin-top:10px; width:100%; height:50px; border-radius: 10px; border: 0.5px solid #d6d6c2; 
-}
-
-.textDone { margin-top:10px; width:100%; height:50px; border-radius: 10px; border:0px; border: 0.5px solid #d6d6c2;}*/
-
 .col-xs-6 { background-color: #f7f7f7; }
 #title { margin-top: 0px; }
 
@@ -52,6 +47,7 @@ input {margin-bottom:10px ;}
 #addbtn{ 	margin-left:10px;
 			height:50px;
 			background-color: #e6ebf2;
+			width:54px;
 }
 
 
@@ -59,10 +55,18 @@ input {margin-bottom:10px ;}
 			margin-left:10px;
 			height:50px;
 			background-color: #e6ebf2;
+			width: 54px
 
 }
 
 
-#specialtextbox {
+.styleTextbox{
 	width:85%;
+}
+
+.styleButton{
+			margin-left:10px;
+			height:50px;
+			background-color: #e6ebf2;
+			width: 54px
 }
