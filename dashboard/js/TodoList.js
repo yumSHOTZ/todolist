@@ -54,36 +54,51 @@ var counter = 0;
 
 
 
-// addtextbox.addEventListener("keypress", function(e){
-// 	var key = e.which || e.keyCode;
-//     if (key === 13) {
-//         var re = /A-Za-z/
-//         if (addtextbox.value == "" || addtextbox.value ==! re || addtextbox.value == null){
-//               alert("Please enter a valid todo item");
-//         }
-//         else
-//                 var addnewtodo= document.createElement("input");
-//                 var addbutton= document.createElement("input");
+addtextbox.addEventListener("keypress", function(e){
+	var key = e.which || e.keyCode;
+    if (key === 13) {
+        var re = /A-Za-z/
+        if (addtextbox.value == "" || addtextbox.value ==! re || addtextbox.value == null){
+              alert("Please enter a valid todo item");
+        }
+        else
+            {
+                counter++;
+                var addnewtodo= document.createElement("input");
+                var addbutton= document.createElement("input");
 
+                    // ADD
+                left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox");
+                left.appendChild(addnewtodo).setAttribute("value", addtextbox.value);
+                left.appendChild(addnewtodo).setAttribute("disabled", "");
+                left.appendChild(addnewtodo).setAttribute("id", "specialtextbox" + counter);
+                addtextbox.value = "";
+                    // EDIT
+                left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton")
+                left.appendChild(addbutton).setAttribute("type", "button");
+                left.appendChild(addbutton).setAttribute("id", "specialbutton" + counter);
+                left.appendChild(addbutton).setAttribute("value", "EDIT");
 
-//                 left.appendChild(addnewtodo).setAttribute("class", "form-control");
-//                 left.appendChild(addnewtodo).setAttribute("value", addtextbox.value);
-//                 left.appendChild(addnewtodo).setAttribute("disabled", "");
-//                 left.appendChild(addnewtodo).setAttribute("id", "specialtextbox");
-//                 addtextbox.value = "";
-//                 left.appendChild(addbutton).setAttribute("class", "btn btn-default")
-//                 left.appendChild(addbutton).setAttribute("type", "button");
-//                 left.appendChild(addbutton).setAttribute("id", "specialbutton");
-//                 left.appendChild(addbutton).setAttribute("value", "EDIT");
-
-//                     var specialtextbox = document.querySelector("#specialtextbox");
-//                     var specialbutton = document.querySelector("#specialbutton");
-//                     specialbutton.addEventListener("click", function(){
-//                     specialtextbox.removeAttribute("disabled");
-//                 });
-
-//      }
-// });
+                    var specialtextbox = document.querySelector("#specialtextbox" + counter);
+                    var specialbutton = document.querySelector("#specialbutton" + counter);
+                    specialbutton.addEventListener("click", function(){
+              
+                    if(specialbutton.value == "EDIT"){
+                        specialtextbox.removeAttribute("disabled");
+                        specialtextbox.setAttribute("class", "form-control justAclass styleTextbox");
+                        specialbutton.setAttribute("value", "OK");
+                    }
+                    else{
+                        specialtextbox.setAttribute("disabled", "");
+                        specialtextbox.setAttribute("class", "form-control styleTextbox");
+                        specialbutton.setAttribute("value", "EDIT");
+                        specialbutton.setAttribute("class", "btn btn-default styleButton")
+                    }             
+                });
+                }
+            }
+                
+});
 
 
 
