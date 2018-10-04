@@ -15,22 +15,22 @@ var addbtn = document.querySelector("#addbtn");
                 document.querySelector("#left").appendChild(addnewtodo).setAttribute("value", addtextbox.value);
                 document.querySelector("#left").appendChild(addnewtodo).setAttribute("disabled", "");
                 document.querySelector("#left").appendChild(addnewtodo).setAttribute("id", "specialtextbox");
-                addtextbox.value = ""; 
+                addtextbox.value = "";
                 document.querySelector("#left").appendChild(addbutton).setAttribute("class", "btn btn-default")
                 document.querySelector("#left").appendChild(addbutton).setAttribute("type", "button");
                 document.querySelector("#left").appendChild(addbutton).setAttribute("id", "specialbutton");
                 document.querySelector("#left").appendChild(addbutton).setAttribute("value", "EDIT");
 
-                
+
 });
 
 
 addtextbox.addEventListener("keypress", function(e){
 	var key = e.which || e.keyCode;
-    if (key === 13) {  
+    if (key === 13) {
         var re = /A-Za-z/
-        if (addtextbox.value == "" || addtextbox.value ==! re || addtextbox.value == null){   
-              alert("Please enter a valid todo item"); 
+        if (addtextbox.value == "" || addtextbox.value ==! re || addtextbox.value == null){
+              alert("Please enter a valid todo item");
         }
         else
     var addnewtodo= document.createElement("input");
@@ -38,7 +38,7 @@ addtextbox.addEventListener("keypress", function(e){
     document.querySelector("#left").appendChild(addnewtodo).setAttribute("class", "form-control");
     document.querySelector("#left").appendChild(addnewtodo).setAttribute("value", addtextbox.value);
     document.querySelector("#left").appendChild(addnewtodo).setAttribute("disabled", "");
-    addtextbox.value = ""; 
+    addtextbox.value = "";
     document.querySelector("#left").appendChild(addbutton).setAttribute("class", "btn btn-default")
     document.querySelector("#left").appendChild(addbutton).setAttribute("type", "button");
     document.querySelector("#left").appendChild(addbutton).setAttribute("id", "specialbutton");
@@ -48,22 +48,18 @@ addtextbox.addEventListener("keypress", function(e){
 
 
 
+
+
+
 // todo -     	ADD a toggle function that disables and enables an <input type text> inside #left
 //new todo - 	REMOVE ALL textbox, add a function that creates a new textbox containing the value of the 
 //				[addtextbox] when [enter key] is pressed
 
 
-// SAMPLE CODE OF CREATE EVENT
-// function addItem() {
-//     var addline = document.createElement("div");
-//     var t = document.createTextNode("asdf");
-//     addline.appendChild(t);
-//     document.body.appendChild(addline);
-// }
 
-// for (i=0; asdf < asdf.length; i++)
-// {
-
-// }
-
-// todoitem1.setAttribute("value",add.value)
+function addItem() {
+    var btn = document.createElement("div");
+    var t = document.createTextNode("asdf");
+    btn.appendChild(t);
+    document.body.appendChild(btn);
+}
