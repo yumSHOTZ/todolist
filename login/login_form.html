@@ -5,6 +5,7 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
+    <script src="account_validation.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style type="text/css">
@@ -18,37 +19,7 @@
          .btn:hover{
             background-color: #c5d6ef;
         }
-	/*	.formField form {
-			margin-bottom: 15px;
-			background: #f7f7f7;
-			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-			padding: 30px;
-		}
-		.formField h2 {
-			margin: 0 0 15px;
-		}
-		.form-control, .btn {
-			min-height: 38px;
-			border-radius: 2px;
-		}
-		.btn {
-			font-size: 15px;
-			font-weight: bold;
-		}
-		body{
-			background-color: #ddd;
-		}
-		form{
-			border-radius: 5px;
-		}
-		.form-control, .btn{
-			border-radius: 10px;
-		}
-		.btn{
-			background-color: #cceeff;
-			font-size: 12px;
-		}
-*/
+
 	</style>
 
 </head>
@@ -58,20 +29,20 @@
 	<div class="background"></div>
 
 	<div class="formField">
-		<form action="" method="post" style="">
+		<form action="" method="post" style="" onsubmit="return loginProcess(this)">
 			<h2 class="text-center">Log in</h2>
 			<div class="form-group">
-				<input class="form-control" maxlength="16" minlength="6" placeholder="Username" required="required" type="text">
+				<input class="form-control" maxlength="16" minlength="6" placeholder="Username" id="uname"  type="text">
 			</div>
 			<div class="form-group">
-				<input class="form-control" placeholder="Password" required="required" type="password">
+				<input class="form-control" placeholder="Password" maxlength="16" id="password" type="password">
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-default btn-block">Log in</button>
 			</div>
 			<div class="clearfix">
 				<span class="text-center"><a href="registration_form.html">Create an Account</a></span>
-				<a href="#" class="pull-right text-center">Forgot Password?</a>
+				<a href="forgot_password.html" class="pull-right text-center">Forgot Password?</a>
 			</div>
 		</form>
 
