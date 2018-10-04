@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List - Registration</title>
+    <link rel="stylesheet" type="text/css" href="loginCss.css">
+    <link rel="stylesheet" type="text/css" href="">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .registration-form {
+            width: 340px;
+            margin: 50px auto;
+        }
+        .registration-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        .registration-form h2 {
+            margin: 0 0 15px;
+        }
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+            color: #2e6da4;
+            border: 0px;
+        }
+        body{
+            background-color: #ddd;
+        }
+        form{
+            border-radius: 25px;
+        }
+        .form-control, .btn{
+            border-radius: 10px;
+        }
+        .btn {
+            background-color: #cceeff;
+            font-size: 12px;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+<div class="content">
+
+    <div class="background"></div>
+
+    <div class="registration-form" onsubmit="return subValidation(this)">
+        <form action="#" method="post">
+            <h2 class="text-center">Register</h2>
+            <div class="form-group">
+                <input class="form-control" placeholder="Username" type="text" id="uname">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Lastname" type="text" id="lname">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Firstname" type="text" id="fname">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Password" value="" required="required" type="text" id="pass">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Re-type Password" value="" required="required" type="text" id="rpass">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Email"type="email" id="email">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">
+
+                    Register
+
+                </button>
+
+    <script>
+
+        function subValidation() {
+            var pass1 = document.getElementById("pass").value;
+            var pass2 = document.getElementById("rpass").value;
+            if (pass1 != pass2) {
+                alert('Password are not the same.');
+                return false;
+
+            }
+            else{
+                alert('Passwords are match.');
+            }
+        }
+    </script>
+
+
+            </div>
+            <div class="clearfix">
+                <span class="text-center"><a href="login_form.html"><< Back</a></span>
+               <!-- <a href="#" class="pull-right text-center">Forgot Password?</a> -->
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>

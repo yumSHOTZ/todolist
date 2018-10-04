@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/TodoList.css">
+</head>
+<body>
+	<div id="headerSpace">
+			<div> <h1 id="title">TODO LIST </h1></div>
+			<div id="userSpace"> 
+			 <p id="loggedUser"> current logged in user <span style="font-size: 12px; " class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href=""> [logout] </a></p></div>	
+	</div>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-xs-6" id="left">
+    	<h1>TODO</h1>
+      	
+    	      	<input id="addtodo" type="text" name="add" class="form-control" placeholder="Add a new todo" title="Enter something that you need to do here."> 
+
+     	
+      	<button class="btn btn-default" id="addbtn" title="Click this button to add your item to the todo list"> ADD </button>
+		
+
+	</div>	
+    <div class="col-xs-6" id="right">
+
+    <h1> DONE</h1> 
+	<input type="text" name="done1" class="form-control" placeholder="Done items are listed here" disabled> <br>	
+	<input type="text" name="done2" class="form-control"placeholder="Done items are listed here" disabled> <br>
+	
+     
+    </div> 
+  </div>
+  <div class="row">
+    
+  </div>
+</div>
+
+<script type="text/javascript" src="../js/TodoList.js"></script>
+</body>
+</html>
