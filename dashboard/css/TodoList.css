@@ -1,10 +1,9 @@
 .col-xs-6 { background-color: #f7f7f7; }
-
 #title { margin-top: 0px; }
 
 body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-background-pattern.jpg");
 	background-size: auto;
-<<<<<<< Updated upstream
+
 }
 
 #date{
@@ -41,20 +40,14 @@ body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-backg
 		 height: auto;
 		}
 
-#headerSpace{ 
+#headerSpace{
 			background-color: #ffffff; border-radius: 10px;
 			padding:1.5%;
-<<<<<<< Updated upstream
 			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:10px;
-=======
-			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:3%;
->>>>>>> Stashed changes
 			}
 
 #loggedUser{ text-align: right; }
-
-body{ background-color: #ddd; }
-
+body	{ background-color: #ddd; }
 .form-control { height:50px;
 				display: inline }
 
@@ -62,17 +55,19 @@ body{ background-color: #ddd; }
 
 input {margin-bottom:10px ;}
 
-#addtodo, #addbtn{float: left;}
+#addtodo, #addbtn{
+	float: left;
+}
 
 #addbtn{ 	margin-left:10px;
 			height:50px;
 			background-color: #e6ebf2;
 			width:54px;
-		}
+}
 
 
 #specialbutton{		margin-left:10px;
-					height:50px;		
+					height:50px;
 					width: 54px
 					text-align:center;
 				}

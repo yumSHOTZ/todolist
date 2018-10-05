@@ -105,7 +105,12 @@ var right = document.querySelector("#right");
 						//DELDONE EVENT LISTENER END
                 }
                 
-                
+                        //UNDO EVENT LISTENER START
+
+                    var undoButton = document.querySelector("#undoButton" + counter);
+                        undoButton.addEventListener("click", function(){
+                            alert("connected");
+                        })
 
 
 
