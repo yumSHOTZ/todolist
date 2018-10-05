@@ -54,8 +54,9 @@ input {margin-bottom:10px ;}
 #specialbutton {
 			margin-left:10px;
 			height:50px;
-			
+			padding-left:5px;
 			width: 54px
+			text-align:center;
 
 }
 
@@ -71,6 +72,6 @@ input {margin-bottom:10px ;}
 			width: 54px
 }
 
-.delButton {
-			background-color: #ffe8e8;
+.doneButton {
+			background-color: #f0ffe0;
 }
