@@ -27,17 +27,17 @@ var counter = 0;
                     // EDIT
                 left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton")
                 left.appendChild(addbutton).setAttribute("type", "button");
-                left.appendChild(addbutton).setAttribute("id", "specialbutton" + counter);
+                left.appendChild(addbutton).setAttribute("id", "editOk" + counter);
                 left.appendChild(addbutton).setAttribute("value", "EDIT");
 
                     var specialtextbox = document.querySelector("#specialtextbox" + counter);
-                    var specialbutton = document.querySelector("#specialbutton" + counter);
-                    specialbutton.addEventListener("click", function(){
+                    var editOk = document.querySelector("#editOk" + counter);
+                    editOk.addEventListener("click", function(){
               
-                    if(specialbutton.value == "EDIT"){
+                    if(editOk.value == "EDIT"){
                         specialtextbox.removeAttribute("disabled");
                         specialtextbox.setAttribute("class", "form-control justAclass styleTextbox");
-                        specialbutton.setAttribute("value", "OK");
+                        editOk.setAttribute("value", "OK");
                     }
                     else{
                         if (specialtextbox.value == "") {
@@ -47,14 +47,14 @@ var counter = 0;
                         }
                         specialtextbox.setAttribute("disabled", "");
                         specialtextbox.setAttribute("class", "form-control styleTextbox");
-                        specialbutton.setAttribute("value", "EDIT");
-                        specialbutton.setAttribute("class", "btn btn-default styleButton");
+                        editOk.setAttribute("value", "EDIT");
+                        editOk.setAttribute("class", "btn btn-default styleButton");
                     }             
                 });
                 }
                 left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton")
                 left.appendChild(addbutton2).setAttribute("type", "button");
-                left.appendChild(addbutton2).setAttribute("id", "specialbutton");
+                left.appendChild(addbutton2).setAttribute("id", "delDone");
                 left.appendChild(addbutton2).setAttribute("value", "DONE");
                 
 
@@ -88,23 +88,23 @@ addtextbox.addEventListener("keypress", function(e){
                     // EDIT
                 left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton")
                 left.appendChild(addbutton).setAttribute("type", "button");
-                left.appendChild(addbutton).setAttribute("id", "specialbutton" + counter);
+                left.appendChild(addbutton).setAttribute("id", "editOk" + counter);
                 left.appendChild(addbutton).setAttribute("value", "EDIT");
 
                     var specialtextbox = document.querySelector("#specialtextbox" + counter);
-                    var specialbutton = document.querySelector("#specialbutton" + counter);
-                    specialbutton.addEventListener("click", function(){
+                    var editOk = document.querySelector("#editOk" + counter);
+                    editOk.addEventListener("click", function(){
               
-                    if(specialbutton.value == "EDIT"){
+                    if(editOk.value == "EDIT"){
                         specialtextbox.removeAttribute("disabled");
                         specialtextbox.setAttribute("class", "form-control justAclass styleTextbox");
-                        specialbutton.setAttribute("value", "OK");
+                        editOk.setAttribute("value", "OK");
                     }
                     else{
                         specialtextbox.setAttribute("disabled", "");
                         specialtextbox.setAttribute("class", "form-control styleTextbox");
-                        specialbutton.setAttribute("value", "EDIT");
-                        specialbutton.setAttribute("class", "btn btn-default styleButton")
+                        editOk.setAttribute("value", "EDIT");
+                        editOk.setAttribute("class", "btn btn-default styleButton")
                     }             
                 });
                 }
