@@ -15,7 +15,8 @@ var counter = 0;
 // {
                 counter++;
 	            var addnewtodo= document.createElement("input");
-                var addbutton= document.createElement("input");
+                var addbutton = document.createElement("input");
+                var addbutton2 = document.createElement("input");
 
                     // ADD
                 left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox");
@@ -46,8 +47,14 @@ var counter = 0;
                     }             
                 });
                 }
+                left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton delButton")
+                left.appendChild(addbutton2).setAttribute("type", "button");
+                left.appendChild(addbutton2).setAttribute("id", "specialbutton");
+                left.appendChild(addbutton2).setAttribute("value", "DEL");
                 
-                
+
+
+
 });
 
 
@@ -118,3 +125,12 @@ addtextbox.addEventListener("keypress", function(e){
 //     document.body.appendChild(btn);
 // }
 
+
+
+
+
+// //ADD DELETE ITEM if (confirm("Press a button!")) {
+//     txt = "You pressed OK!";
+// } else {
+//     txt = "You pressed Cancel!";
+// }

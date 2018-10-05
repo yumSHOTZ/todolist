@@ -54,14 +54,14 @@ input {margin-bottom:10px ;}
 #specialbutton {
 			margin-left:10px;
 			height:50px;
-			background-color: #e6ebf2;
+			
 			width: 54px
 
 }
 
 
 .styleTextbox{
-	width:85%;
+	width:71%;
 }
 
 .styleButton{
@@ -69,4 +69,8 @@ input {margin-bottom:10px ;}
 			height:50px;
 			background-color: #e6ebf2;
 			width: 54px
+}
+
+.delButton {
+			background-color: #ffe8e8;
 }
