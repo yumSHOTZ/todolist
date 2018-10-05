@@ -59,7 +59,8 @@ var right = document.querySelector("#right");
                         editOk.setAttribute("value", "EDIT");
                         editOk.setAttribute("class", "btn btn-default styleButton");
                         delDone.setAttribute("value", "DONE");
-                    }             
+                    }
+
                 });
                     	//EDITOK EVENT LISTENER END
 
@@ -106,15 +107,15 @@ var right = document.querySelector("#right");
                 }
                 
                         //UNDO EVENT LISTENER START
-
-                    var undoButton = document.querySelector("#undoButton" + counter);
+                    var undoButton = document.querySelector("#undoButton");
                         undoButton.addEventListener("click", function(){
-                            alert("connected");
-                        })
+                            alert("wtf");
+                        });
 
 
 
 });
+
 
 
 
