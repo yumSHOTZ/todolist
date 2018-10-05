@@ -8,7 +8,7 @@ var counter = 0;
  addbtn.addEventListener("click", function(){
     var re = /A-Za-z/
         if (addtextbox.value == "" || addtextbox.value ==! re || addtextbox.value == null)
-            {  alert("please input a todo item before submitting"); }
+            {  alert("please input a todo item before submitting"); addtextbox.focus(); }
             else
             {
 // // for (counter=0; counter < specialbutton.length; counter++)
@@ -40,10 +40,15 @@ var counter = 0;
                         specialbutton.setAttribute("value", "OK");
                     }
                     else{
+                        if (specialtextbox.value == "") {
+                            alert('Cannot leave blank.');
+                            specialtextbox.focus();
+                            return false;
+                        }
                         specialtextbox.setAttribute("disabled", "");
                         specialtextbox.setAttribute("class", "form-control styleTextbox");
                         specialbutton.setAttribute("value", "EDIT");
-                        specialbutton.setAttribute("class", "btn btn-default styleButton")
+                        specialbutton.setAttribute("class", "btn btn-default styleButton");
                     }             
                 });
                 }
