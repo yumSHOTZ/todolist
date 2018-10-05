@@ -47,7 +47,10 @@ var counter = 0;
                     }             
                 });
                 }
- 
+                left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton")
+                left.appendChild(addbutton2).setAttribute("type", "button");
+                left.appendChild(addbutton2).setAttribute("id", "specialbutton");
+                left.appendChild(addbutton2).setAttribute("value", "DONE");
                 
 
 
