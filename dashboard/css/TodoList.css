@@ -4,6 +4,7 @@
 
 body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-background-pattern.jpg");
 	background-size: auto;
+<<<<<<< Updated upstream
 }
 
 #date{
@@ -12,6 +13,8 @@ body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-backg
 	font-style: bold;
 	margin-bottom: 5px;
 	color: white;
+=======
+>>>>>>> Stashed changes
 }
 
 #left  { padding-top: 2%;
@@ -41,7 +44,11 @@ body{background-image: url("https://storage.needpix.com/thumbs/gray-mosaic-backg
 #headerSpace{ 
 			background-color: #ffffff; border-radius: 10px;
 			padding:1.5%;
+<<<<<<< Updated upstream
 			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:10px;
+=======
+			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:3%;
+>>>>>>> Stashed changes
 			}
 
 #loggedUser{ text-align: right; }
