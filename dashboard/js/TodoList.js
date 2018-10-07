@@ -9,7 +9,7 @@ var right = document.querySelector("#right");
  addbtn.addEventListener("click", function(){
     var re = /A-Za-z/
         if (addtextbox.value == "" || addtextbox.value ==! re || addtextbox.value == null)
-            {  alert("please input a todo item before submitting"); addtextbox.focus(); }
+            {  alert("Please input a todo item before submitting"); addtextbox.focus(); }
             else
             {
                 counter++;
