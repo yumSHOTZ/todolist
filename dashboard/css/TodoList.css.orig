@@ -9,26 +9,19 @@ body {
         /*url("https://storage.needpix.com/thumbs/gray-mosaic-background-pattern.jpg")*/
     ;
     background-size: auto;
+    width:1353px;
+    margin: auto;
 
 }
 
-#date {
-    font-family: "serif";
+#date{
+    font-family: "Sans-serif";
     font-size: 16px;
     text-align: center;
     font-style: bold;
     margin-bottom: 5px;
     color: white;
 }
-
-.row{
-	height: 500px;
-}
-
-.container{
-	height: 530px;
-}
-
 
 #left,
 #right {
@@ -37,14 +30,14 @@ body {
 
 #left {
     padding-top: 2%;
-    padding-bottom: 10%;
+    padding-bottom: 20px;
     padding-left: 5%;
     padding-right: 5%;
     margin-right: 20px;
     width: 49%;
     border-radius: 15px;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    min-height: 300px;
+    min-height: 497px;
     height: auto;
 }
 
@@ -57,25 +50,15 @@ body {
     width: 49%;
     border-radius: 15px;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    min-height: 300px;
+    min-height: 497px;
     height: auto;
 }
 
-<<<<<<< HEAD
 #headerSpace{ 
 			background-color: #ffffff; border-radius: 0px 0px 10px 10px;
 			padding:1.5%;
 			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:10px;
 		}
-=======
-#headerSpace {
-    background-color: #ffffff;
-    border-radius: 0px 0px 10px 10px;
-    padding: 1.5%;
-    <<<<<<< Updated upstream box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    margin-bottom: 10px;
-}
->>>>>>> 39a6354eecc107d2e41282b7bd23aa0f11545d87
 
 #loggedUser {
     text-align: right;
@@ -87,7 +70,7 @@ body {
 }
 
 #addtodo {
-    width: 85%;
+    /*width: 85%;*/
     margin-right: 0px;
 }
 
@@ -95,6 +78,10 @@ input {
     margin-bottom: 10px;
 }
 
+/*#addtodo,
+#addbtn {
+    float: left;
+}*/
 
 #addbtn {
     margin-left: 10px;
@@ -103,15 +90,7 @@ input {
     width: 54px;
 }
 
-<<<<<<< HEAD
-=======
-#addbtn {
-    margin-left: 10px;
-    height: 50px;
-    background-color: #e6ebf2;
-    width: 54px;
-}
->>>>>>> 39a6354eecc107d2e41282b7bd23aa0f11545d87
+
 
 #specialbutton {
     margin-left: 10px;
@@ -131,6 +110,10 @@ input {
     width: 54px
 }
 
+.left{
+	margin-right: 62px;
+}
+
 .doneButton {
     background-color: #f0ffe0;
 }
@@ -140,7 +123,7 @@ input {
 }
 
 .styleDone {
-    width: 71%;
+    width: 80%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -151,12 +134,18 @@ input {
     }
 }
 
+@media only screen and (max-width: 1353px){
+	body{
+		width: 100%;
+	}
+}
+
 .footer {
     background-color: white;
     width: 99%;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
     border-radius: 2px 0px 10px 10px;
-    margin: 2px auto 10px auto;
+    margin: 2px auto 4px auto;
     height: 30px;
 }
 
@@ -184,15 +173,42 @@ input {
 #loggedUser {
     margin-top: 20px;
     margin-bottom: 0px;
-<<<<<<< HEAD
 }
 
+.editButton {
+	display:none;
+}
+
+.doneButton {
+	display:none;
+}
+
+
+/*@media ( hover:hover ) { testbtn:hover { color:white; } }*/
 .textInput{
 
 }
 
-.buttonAdd{
-	float: right;
-=======
->>>>>>> 39a6354eecc107d2e41282b7bd23aa0f11545d87
+.noContent{
+	width: 100%; text-align: center; margin-top: 120px;float: left; font-size: 32px; opacity: .4;
 }
+
+.btn-float{
+	float: right;
+	margin-top: -60px;
+}
+
+.txtFloat{
+	width: 100%;
+	float: left;
+	padding-right: 9%;
+}
+
+<<<<<<< HEAD
+.dataFloat{
+	width: 100%;
+	float: left;
+	padding-right: 50px;
+}
+=======
+>>>>>>> e60d1f2a0840f3c2d51eaedbc70d6d204873f69e
