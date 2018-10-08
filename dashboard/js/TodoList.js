@@ -40,6 +40,26 @@ addbtn.addEventListener("click", function() {
         var editOk = document.querySelector("#editOk" + counter);
         var delDone = document.querySelector("#delDone" + counter);
 
+
+
+
+
+
+
+
+        document.querySelector("#specialtextbox" + counter).addEventListener("mouseover", function(){
+        document.querySelector("#editOk" + counter).classList.toggle("editButton");
+        document.querySelector("#delDone" + counter).classList.toggle("doneButton");
+        });
+
+
+
+
+
+
+
+
+
         editOk.addEventListener("click", function() {
             if (editOk.value == "EDIT") {
                 specialtextbox.removeAttribute("disabled");
@@ -59,6 +79,7 @@ addbtn.addEventListener("click", function() {
                 editOk.setAttribute("class", "btn btn-default styleButton");
                 delDone.setAttribute("value", "DONE");
             }
+
 
         });
         //EDITOK EVENT LISTENER END
@@ -150,6 +171,9 @@ addbtn.addEventListener("click", function() {
 });
 
 
+
+// var specialtextbox =  document.querySelector("#specialtextbox" + counter);
+// var edit = document.querySelector("#editOk" + counter);
 
 
 

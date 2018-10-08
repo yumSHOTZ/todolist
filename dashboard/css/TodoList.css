@@ -90,12 +90,6 @@ input {
     width: 54px;
 }
 
-#addbtn {
-    margin-left: 10px;
-    height: 50px;
-    background-color: #e6ebf2;
-    width: 54px;
-}
 
 #specialbutton {
     margin-left: 10px;
@@ -164,3 +158,14 @@ input {
     margin-top: 20px;
     margin-bottom: 0px;
 }
+
+.editButton {
+	display:none;
+}
+
+.doneButton {
+	display:none;
+}
+
+
+/*@media ( hover:hover ) { testbtn:hover { color:white; } }*/
