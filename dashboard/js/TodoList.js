@@ -18,18 +18,18 @@ addbtn.addEventListener("click", function() {
         var addbutton2 = document.createElement("input");
 
         // ADD
-        left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox");
+        left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox dataFloat");
         left.appendChild(addnewtodo).setAttribute("value", addtextbox.value);
         left.appendChild(addnewtodo).setAttribute("disabled", "");
         left.appendChild(addnewtodo).setAttribute("id", "specialtextbox" + counter);
         addtextbox.value = "";
         // EDITOK
-        left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton editButton")
+        left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton editButton btn-float left")
         left.appendChild(addbutton).setAttribute("type", "button");
         left.appendChild(addbutton).setAttribute("id", "editOk" + counter);
         left.appendChild(addbutton).setAttribute("value", "EDIT");
         // DELDONE
-        left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton")
+        left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton btn-float")
         left.appendChild(addbutton2).setAttribute("type", "button");
         left.appendChild(addbutton2).setAttribute("id", "delDone" + counter);
         left.appendChild(addbutton2).setAttribute("value", "DONE");
@@ -43,7 +43,7 @@ addbtn.addEventListener("click", function() {
         editOk.addEventListener("click", function() {
             if (editOk.value == "EDIT") {
                 specialtextbox.removeAttribute("disabled");
-                specialtextbox.setAttribute("class", "form-control justAclass styleTextbox");
+                specialtextbox.setAttribute("class", "form-control justAclass styleTextbox dataFloat");
                 editOk.setAttribute("value", "OK");
                 delDone.setAttribute("value", "DEL");
             } else {
@@ -54,9 +54,9 @@ addbtn.addEventListener("click", function() {
                     return false;
                 }
                 specialtextbox.setAttribute("disabled", "");
-                specialtextbox.setAttribute("class", "form-control styleTextbox");
+                specialtextbox.setAttribute("class", "form-control styleTextbox dataFloat");
                 editOk.setAttribute("value", "EDIT");
-                editOk.setAttribute("class", "btn btn-default styleButton");
+                editOk.setAttribute("class", "btn btn-default styleButton btn-float");
                 delDone.setAttribute("value", "DONE");
             }
 
@@ -89,18 +89,18 @@ addbtn.addEventListener("click", function() {
                 document.querySelector("#left").removeChild(delDone);
                 //creates doneitem textbox to (right) and adds value from specialtextbox(left)
                 right.appendChild(add).setAttribute("id", "doneitem" + counter);
-                right.appendChild(add).setAttribute("class", "form-control styleDone");
+                right.appendChild(add).setAttribute("class", "form-control styleDone dataFloat");
                 right.appendChild(add).setAttribute("disabled", "");
                 right.appendChild(add).setAttribute("value", specialtextbox.value);
                 right.appendChild(add).setAttribute("title", "Can't edit a done item.");
                 //creates undo button on (right)
                 right.appendChild(addbutton3).setAttribute("type", "button");
-                right.appendChild(addbutton3).setAttribute("class", "btn btn-default styleButton");
+                right.appendChild(addbutton3).setAttribute("class", "btn btn-default styleButton btn-float");
                 right.appendChild(addbutton3).setAttribute("value", "UNDO");
                 right.appendChild(addbutton3).setAttribute("id", "undoButton" + counter);
                 right.appendChild(addbutton3).setAttribute("title", "Click here to undo this item.");
 
-                right.appendChild(addbutton4).setAttribute("class", "btn btn-default styleButton doneButton");
+                right.appendChild(addbutton4).setAttribute("class", "btn btn-default styleButton doneButton btn-float");
                 right.appendChild(addbutton4).setAttribute("type", "button");
                 right.appendChild(addbutton4).setAttribute("id", "del" + counter);
                 right.appendChild(addbutton4).setAttribute("value", "DEL");
@@ -123,15 +123,15 @@ addbtn.addEventListener("click", function() {
 
                     left.appendChild(addnewtodo).setAttribute("disabled", "");
                     left.appendChild(addnewtodo).setAttribute("id", "specialtextbox" + counter);
-                    left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox");
+                    left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox dataFloat");
                     left.appendChild(addnewtodo).setAttribute("value", doneTextbox.value);
 
-                    left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton")
+                    left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton btn-float")
                     left.appendChild(addbutton).setAttribute("type", "button");
                     left.appendChild(addbutton).setAttribute("id", "editOk" + counter);
                     left.appendChild(addbutton).setAttribute("value", "EDIT");
 
-                    left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton")
+                    left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton btn-float")
                     left.appendChild(addbutton2).setAttribute("type", "button");
                     left.appendChild(addbutton2).setAttribute("id", "delDone" + counter);
                     left.appendChild(addbutton2).setAttribute("value", "DONE");

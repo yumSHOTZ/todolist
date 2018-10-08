@@ -9,6 +9,8 @@ body {
         /*url("https://storage.needpix.com/thumbs/gray-mosaic-background-pattern.jpg")*/
     ;
     background-size: auto;
+    width:1353px;
+    margin: auto;
 
 }
 
@@ -68,7 +70,7 @@ body {
 }
 
 #addtodo {
-    width: 85%;
+    /*width: 85%;*/
     margin-right: 0px;
 }
 
@@ -76,10 +78,10 @@ input {
     margin-bottom: 10px;
 }
 
-#addtodo,
+/*#addtodo,
 #addbtn {
     float: left;
-}
+}*/
 
 #addbtn {
     margin-left: 10px;
@@ -112,6 +114,10 @@ input {
     width: 54px
 }
 
+.left{
+	margin-right: 62px;
+}
+
 .doneButton {
     background-color: #f0ffe0;
 }
@@ -130,6 +136,12 @@ input {
     #right {
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 1353px){
+	body{
+		width: 100%;
+	}
 }
 
 .footer {
@@ -171,10 +183,23 @@ input {
 
 }
 
-.buttonAdd{
-	float: right;
-}
-
 .noContent{
 	width: 100%; text-align: center; margin-top: 120px;float: left; font-size: 32px; opacity: .4;
+}
+
+.btn-float{
+	float: right;
+	margin-top: -60px;
+}
+
+.txtFloat{
+	width: 100%;
+	float: left;
+	padding-right: 9%;
+}
+
+.dataFloat{
+	width: 100%;
+	float: left;
+	padding-right: 50px;
 }
