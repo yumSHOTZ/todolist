@@ -12,8 +12,8 @@ body {
 
 }
 
-#date {
-    font-family: "serif";
+#date{
+    font-family: "Sans-serif";
     font-size: 16px;
     text-align: center;
     font-style: bold;
@@ -28,14 +28,14 @@ body {
 
 #left {
     padding-top: 2%;
-    padding-bottom: 10%;
+    padding-bottom: 20px;
     padding-left: 5%;
     padding-right: 5%;
     margin-right: 20px;
     width: 49%;
     border-radius: 15px;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    min-height: 300px;
+    min-height: 497px;
     height: auto;
 }
 
@@ -48,17 +48,15 @@ body {
     width: 49%;
     border-radius: 15px;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    min-height: 300px;
+    min-height: 497px;
     height: auto;
 }
 
-#headerSpace {
-    background-color: #ffffff;
-    border-radius: 0px 0px 10px 10px;
-    padding: 1.5%;
-    <<<<<<< Updated upstream box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    margin-bottom: 10px;
-}
+#headerSpace{ 
+			background-color: #ffffff; border-radius: 0px 0px 10px 10px;
+			padding:1.5%;
+			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:10px;
+		}
 
 #loggedUser {
     text-align: right;
@@ -90,6 +88,14 @@ input {
     width: 54px;
 }
 
+<<<<<<< HEAD
+=======
+#addbtn{ 	margin-left:10px;
+			height:50px;
+			background-color: #e6ebf2;
+			width:54px;
+		}
+>>>>>>> 3e876f667ed5b99b2ed8fe3480a3fc5d8aca4f12
 
 #specialbutton {
     margin-left: 10px;
@@ -118,7 +124,7 @@ input {
 }
 
 .styleDone {
-    width: 71%;
+    width: 80%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -131,10 +137,15 @@ input {
 
 .footer {
     background-color: white;
-    width: 97%;
+    width: 99%;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    border-radius: 0px 0px 10px 10px;
-    margin: 5px auto 10px auto;
+    border-radius: 2px 0px 10px 10px;
+    margin: 2px auto 4px auto;
+    height: 30px;
+}
+
+.footer span{
+	margin: auto;
 }
 
 
@@ -144,8 +155,8 @@ input {
     padding: 1%;
     padding-bottom: 5px;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    margin: 5px auto 10px auto;
-    width: 97%;
+    margin: 2px auto 10px auto;
+    width: 99%;
 }
 
 .title {
@@ -159,6 +170,7 @@ input {
     margin-bottom: 0px;
 }
 
+<<<<<<< HEAD
 .editButton {
 	display:none;
 }
@@ -169,3 +181,16 @@ input {
 
 
 /*@media ( hover:hover ) { testbtn:hover { color:white; } }*/
+=======
+.textInput{
+
+}
+
+.buttonAdd{
+	float: right;
+}
+
+.noContent{
+	width: 100%; text-align: center; margin-top: 120px;float: left; font-size: 32px; opacity: .4;
+}
+>>>>>>> 3e876f667ed5b99b2ed8fe3480a3fc5d8aca4f12

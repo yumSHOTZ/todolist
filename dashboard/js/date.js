@@ -1,20 +1,21 @@
-function currentDate(){
-	var d = new Date();
+document.getElementById('body').onload = function() { currentDate() };
 
-	var today = d.getDay();
-	var month = d.getMonth();
-	var year = d.getFullYear();
-	var date = d.getDate();
+function currentDate() {
+    var d = new Date();
 
-	var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-	var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var today = d.getDay();
+    var month = d.getMonth();
+    var year = d.getFullYear();
+    var date = d.getDate();
 
-	var n_month = months[month];
-	var n_day = days[today];
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-	var completeDate = n_day + ", " + n_month + " " + date + " " + year;
+    var n_month = months[month];
+    var n_day = days[today];
 
-	document.getElementById('date').innerHTML = completeDate;
+    var completeDate = n_day + ", " + n_month + " " + date + " " + year;
 
+    document.getElementById('date').innerHTML = completeDate;
 
 }
