@@ -6,10 +6,10 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/TodoList.css">
     <script type="text/javascript" src="../js/container.js"></script>
-    <script type="text/javascript" src="../js/date.js"></script>
+
 </head>
 
-<body onload="currentDate();">
+<body id="body">
     <div id="headerSpace">
         <div class="title"> <h1 id="title">TODO LIST </h1>
         </div>
@@ -23,8 +23,14 @@
             <div class="col-xs-6" id="left">
                 <h1>TODO</h1>
                 <div>
-                    <input id="addtodo" type="text" name="add" class="form-control" placeholder="Add a new todo" title="Enter something that you need to do here.">
-                    <button class="btn btn-default" id="addbtn" title="Click this button to add your item to the todo list"> ADD </button>
+                    <div class="textInput">	
+                    <input id="addtodo" type="text" name="add" class="form-control" placeholder="Add a new todo" title="Enter something that you need to do here." style="width: 100%;float: left;padding-right: 50px;">
+                    </div>
+
+                    <div class="buttonAdd">
+                    <button class="btn btn-default" id="addbtn" title="Click this button to add your item to the todo list" style="float: right;margin-top: -60px;"> ADD </button>
+                    </div>
+
                 </div>
             </div>
             <div class="col-xs-6" id="right">
@@ -33,9 +39,10 @@
         </div>
     </div>
 
-<div class="footer footer-copyright text-center py-3">tanginamo.com.ph</div>
+<div class="footer footer-copyright text-center py-3">samplesite.com.ph</div>
 
 <script type="text/javascript" src="../js/TodoList.js"></script>
 </body>
 
 </html>
+    <script type="text/javascript" src="../js/date.js"></script>

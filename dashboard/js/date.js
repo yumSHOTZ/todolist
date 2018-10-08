@@ -1,3 +1,5 @@
+
+
 function currentDate(){
 	var d = new Date();
 
@@ -17,4 +19,5 @@ function currentDate(){
 	document.getElementById('date').innerHTML = completeDate;
 
 
+document.getElementById('body').onload = function(){currentDate()};
 }
