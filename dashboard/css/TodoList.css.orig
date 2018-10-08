@@ -12,8 +12,7 @@ body {
 
 }
 
-#date{
-<<<<<<< HEAD
+#date {
     font-family: "serif";
     font-size: 16px;
     text-align: center;
@@ -21,6 +20,15 @@ body {
     margin-bottom: 5px;
     color: white;
 }
+
+.row{
+	height: 500px;
+}
+
+.container{
+	height: 530px;
+}
+
 
 #left,
 #right {
@@ -53,6 +61,21 @@ body {
     height: auto;
 }
 
+<<<<<<< HEAD
+#headerSpace{ 
+			background-color: #ffffff; border-radius: 0px 0px 10px 10px;
+			padding:1.5%;
+			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:10px;
+		}
+=======
+#headerSpace {
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    padding: 1.5%;
+    <<<<<<< Updated upstream box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+>>>>>>> 39a6354eecc107d2e41282b7bd23aa0f11545d87
 
 #loggedUser {
     text-align: right;
@@ -72,10 +95,6 @@ input {
     margin-bottom: 10px;
 }
 
-#addtodo,
-#addbtn {
-    float: left;
-}
 
 #addbtn {
     margin-left: 10px;
@@ -84,6 +103,15 @@ input {
     width: 54px;
 }
 
+<<<<<<< HEAD
+=======
+#addbtn {
+    margin-left: 10px;
+    height: 50px;
+    background-color: #e6ebf2;
+    width: 54px;
+}
+>>>>>>> 39a6354eecc107d2e41282b7bd23aa0f11545d87
 
 #specialbutton {
     margin-left: 10px;
@@ -112,7 +140,7 @@ input {
 }
 
 .styleDone {
-    width: 80%;
+    width: 71%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -125,10 +153,15 @@ input {
 
 .footer {
     background-color: white;
-    width: 97%;
+    width: 99%;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    border-radius: 0px 0px 10px 10px;
-    margin: 5px auto 10px auto;
+    border-radius: 2px 0px 10px 10px;
+    margin: 2px auto 10px auto;
+    height: 30px;
+}
+
+.footer span{
+	margin: auto;
 }
 
 
@@ -138,8 +171,8 @@ input {
     padding: 1%;
     padding-bottom: 5px;
     box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-    margin: 5px auto 10px auto;
-    width: 97%;
+    margin: 2px auto 10px auto;
+    width: 99%;
 }
 
 .title {
@@ -151,90 +184,15 @@ input {
 #loggedUser {
     margin-top: 20px;
     margin-bottom: 0px;
+<<<<<<< HEAD
 }
+
+.textInput{
+
+}
+
+.buttonAdd{
+	float: right;
 =======
-	font-family: "serif";
-	font-size: 16px;
-	text-align: center;
-	font-style: bold;
-	margin-bottom: 5px;
-	color: white;
-=======
->>>>>>> Stashed changes
+>>>>>>> 39a6354eecc107d2e41282b7bd23aa0f11545d87
 }
-
-#left, #right{
-	margin-bottom: 10px;
-}
-
-#left  { padding-top: 2%;
-		 padding-bottom: 10%;
-		 padding-left: 5%;
-		 padding-right:5%;
-		 margin-right:20px;
-		 width:49%;
-		 border-radius: 15px;
-		 box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-		 min-height: 300px;
-		 height: auto;
-		}
-
-#right { padding-top: 2%;
-		 padding-bottom: 10%;
-		 padding-left: 5%;
-		 padding-right:5%;
-		 /*margin-left:10px;*/
-		 width:49%;
-		 border-radius: 15px;
-		 box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3);
-		 min-height: 300px;
-		 height: auto;
-		}
-
-#headerSpace{ 
-			background-color: #ffffff; border-radius: 0px 0px 10px 10px;
-			padding:1.5%;
-<<<<<<< Updated upstream
-			box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.3); margin-bottom:10px;
-		}
-
-#loggedUser{ text-align: right; }
-
-body{ background-color: #ddd; }
-
-.form-control { height:50px;
-				display: inline }
-
-#addtodo{ width:85%; margin-right: 0px; }
-
-input {margin-bottom:10px ;}
-
-#addtodo, #addbtn{float: left;}
-
-#addbtn{ 	margin-left:10px;
-			height:50px;
-			background-color: #e6ebf2;
-			width:54px;
-		}
-
-
-#specialbutton{		margin-left:10px;
-					height:50px;		
-					width: 54px
-					text-align:center;
-				}
-
-.styleTextbox{width:71%;}
-
-.styleButton{	margin-left:10px;
-				height:50px;
-				background-color: #e6ebf2;
-				width: 54px
-			}
-
-.doneButton{background-color: #f0ffe0;}
-
-.btn{padding: 0;}
-
-.styleDone{width:71%;}
->>>>>>> f9daa4e46cd2a7b5499e95e45125e6fb9657475b
