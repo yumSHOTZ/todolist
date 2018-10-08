@@ -2,7 +2,7 @@ var addtextbox = document.querySelector("#addtodo");
 var left = document.querySelector("#left");
 var addbtn = document.querySelector("#addbtn");
 var counter = 0;
-
+s
 var right = document.querySelector("#right");
 
 

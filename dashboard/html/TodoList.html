@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Todo List - Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/TodoList.css">
-	<script type="text/javascript" src="../js/container.js"></script>
-	<script type="text/javascript" src="../js/date.js"></script>
+    <title>Todo List - Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/TodoList.css">
+    <script type="text/javascript" src="../js/container.js"></script>
+    <script type="text/javascript" src="../js/date.js"></script>
 </head>
-<body onload="currentDate(); resPonse();" onresize="resPonse()">
-	<div id="headerSpace">
-			<div> <h1 id="title">TODO LIST </h1></div>
-			<div id="userSpace"> 
-			 <p id="loggedUser"> current logged in user <span style="font-size: 12px; " class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href=""> [logout] </a></p></div>	
-	</div>
-<div class="container">
- <div onload="" id="date"></div> 
-  <div class="row">
-    <div class="col-xs-6" id="left">
-    	<h1>TODO</h1>
-      	<div>
-    	      	<input id="addtodo" type="text" name="add" class="form-control" placeholder="Add a new todo" title="Enter something that you need to do here."> 
 
-     	
-      	<button class="btn btn-default" id="addbtn" title="Click this button to add your item to the todo list"> ADD </button>
-		</div>
+<body onload="currentDate();">
+    <div id="headerSpace">
+        <div class="title"> <h1 id="title">TODO LIST </h1>
+        </div>
+        <div id="userSpace">
+            <p id="loggedUser"> current logged in user <span style="font-size: 12px; " class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href=""> [logout] </a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div onload="" id="date"></div>
+        <div class="row">
+            <div class="col-xs-6" id="left">
+                <h1>TODO</h1>
+                <div>
+                    <input id="addtodo" type="text" name="add" class="form-control" placeholder="Add a new todo" title="Enter something that you need to do here.">
+                    <button class="btn btn-default" id="addbtn" title="Click this button to add your item to the todo list"> ADD </button>
+                </div>
+            </div>
+            <div class="col-xs-6" id="right">
+                <h1> DONE</h1>
+            </div>
+        </div>
+    </div>
 
-
-
-	</div>	
-
-	<!-- <div class="col-sm-6" style="height: 100px;width: 1px;"></div>
- -->
-    <div class="col-xs-6" id="right">
-
-    <h1> DONE</h1> 
-	
-	
-     
-    </div> 
-  </div>
-  <div class="row">
-    
-  </div>
-</div>
+<div class="footer footer-copyright text-center py-3">tanginamo.com.ph</div>
 
 <script type="text/javascript" src="../js/TodoList.js"></script>
 </body>
+
 </html>
