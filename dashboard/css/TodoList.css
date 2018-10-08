@@ -88,14 +88,7 @@ input {
     width: 54px;
 }
 
-<<<<<<< HEAD
-=======
-#addbtn{ 	margin-left:10px;
-			height:50px;
-			background-color: #e6ebf2;
-			width:54px;
-		}
->>>>>>> 3e876f667ed5b99b2ed8fe3480a3fc5d8aca4f12
+
 
 #specialbutton {
     margin-left: 10px;
@@ -170,7 +163,6 @@ input {
     margin-bottom: 0px;
 }
 
-<<<<<<< HEAD
 .editButton {
 	display:none;
 }
@@ -181,7 +173,6 @@ input {
 
 
 /*@media ( hover:hover ) { testbtn:hover { color:white; } }*/
-=======
 .textInput{
 
 }
@@ -193,4 +184,4 @@ input {
 .noContent{
 	width: 100%; text-align: center; margin-top: 120px;float: left; font-size: 32px; opacity: .4;
 }
->>>>>>> 3e876f667ed5b99b2ed8fe3480a3fc5d8aca4f12
+
