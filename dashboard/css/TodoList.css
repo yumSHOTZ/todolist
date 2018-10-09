@@ -14,7 +14,7 @@ body {
 
 }
 
-#date{
+#dateToday{
     font-family: "Sans-serif";
     font-size: 16px;
     text-align: center;
@@ -134,7 +134,10 @@ input {
 
     #left,
     #right {
-        width: 100%;
+        width: 99%;
+    }
+    #container{
+    	padding: auto;
     }
 }
 
@@ -142,6 +145,19 @@ input {
 	body{
 		width: 100%;
 	}
+}
+
+@media only screen and (max-width: 1353px){
+	.textFloat{
+		margin-right: 1%;
+	}
+}
+
+@media only screen and (max-width: 750px){
+	#left,
+    #right {
+        margin-left: 2px;
+    }
 }
 
 .footer {
@@ -193,13 +209,23 @@ input {
 }
 
 .txtFloat{
-	width: 100%;
+	width: 95%;
 	float: left;
-	padding-right: 9%;
+	padding-right: 20px
 }
+
 
 .dataFloat{
 	width: 100%;
+	width: 100%;
 	float: left;
-	padding-right: 50px;
+	padding-right:62px;
+
+}
+
+#date{
+	margin-top: -87px;
+	float: right;
+	border-width: 0px 0px 1px 0px;
+	border-color: black;
 }

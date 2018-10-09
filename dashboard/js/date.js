@@ -16,6 +16,27 @@ function currentDate() {
 
     var completeDate = n_day + ", " + n_month + " " + date + " " + year;
 
-    document.getElementById('date').innerHTML = completeDate;
+    document.getElementById('dateToday').innerHTML = completeDate;
+    month += 1;
+    newDate = date.toString();
+    newMonth = month.toString();
+    if (month < 10){
+    	if (date < 10) {
+    		document.getElementById('date').setAttribute('min', year + "-" + newMonth.padStart(2, '0') + "-0" + newDate.padStart(2, '0'));
+    		document.getElementById('date').value = year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0');
+    	}
+    	else
+   			document.getElementById('date').setAttribute('min', year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0'));
+    		document.getElementById('date').value = year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0');
+   	}
 
+   	else{
+   		if(date < 10){
+   			document.getElementById('date').setAttribute('min', year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0'));
+    		document.getElementById('date').value = year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0');
+   		}
+   		else	
+   			document.getElementById('date').setAttribute('min', year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0'));
+    		document.getElementById('date').value = year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0');
+   	}
 }
