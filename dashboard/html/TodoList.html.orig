@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/TodoList.css">
     <script type="text/javascript" src="../js/container.js"></script>
+    
 </head>
 
 <body id='body'>
@@ -17,49 +18,53 @@
         </div>
     </div>
     <div class="container">
-        <div onload="" id="date"></div>
+        <div onload="" id="dateToday"></div>
         <div class="row">
             <div class="col-xs-6" id="left">
                 <h1>TODO</h1>
                 <div>
-<<<<<<< HEAD
                     
                     <input id="addtodo" type="text" name="add" class="form-control txtFloat" placeholder="Add a new todo" title="Enter something that you need to do here.">
 
                     <!-- <div style="float: left;text-align: center;padding: auto;width: 100%;">hey</div> -->
                                        
                     <button id="addbtn" class="btn btn-default btn-float" title="Click this button to add your item to the todo list"> ADD </button>
+                    <input type="date" name="date" id="date">
                     
 
+<<<<<<< HEAD
+                    <div class="noContent" readOnly>
 =======
-                    <div class="textInput">
-                        <input id="addtodo" type="text" name="add" class="form-control" placeholder="Add a new todo" title="Enter something that you need to do here." style="width: 100%;float: left;padding-right: 50px;">
-                        <!-- <div style="float: left;text-align: center;padding: auto;width: 100%;">hey</div> -->
-                    </div>
-                    <div class="buttonAdd">
-                        <button class="btn btn-default" id="addbtn" title="Click this button to add your item to the todo list" style="float: right;margin-top: -60px;"> ADD </button>
-                    </div>
->>>>>>> e60d1f2a0840f3c2d51eaedbc70d6d204873f69e
-                    <div class="noContent">
-                        <span>
+                    <div class="noContentleft" id="leftnoitem">
+>>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
+                    <span>
                     Nothing to show
-                    </span>
+                	</span>
                     </div>
+
+
                 </div>
             </div>
             <div class="col-xs-6" id="right">
                 <h1> DONE</h1>
-                <div class="noContent">
+
+<<<<<<< HEAD
+                    <div class="noContent" readOnly>
+=======
+                    <div class="noContentright" id="rightnoitem">
+>>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
                     <span>
                     Nothing to show
-                    </span>
-                </div>
+                	</span>
+                    </div>
             </div>
         </div>
     </div>
-    <div class="footer footer-copyright text-center py-3">samplesite.com.ph</div>
-    <script type="text/javascript" src="../js/TodoList.js"></script>
-    <script type="text/javascript" src="../js/date.js"></script>
+
+<div class="footer footer-copyright text-center py-3">samplesite.com.ph</div>
+
+<script type="text/javascript" src="../js/TodoList.js"></script>
+<script type="text/javascript" src="../js/date.js"></script>
 </body>
 
 </html>

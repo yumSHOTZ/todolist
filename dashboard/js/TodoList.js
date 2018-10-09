@@ -21,48 +21,37 @@ addbtn.addEventListener("click", function() {
         var addnewtodo = document.createElement("input");
         var addbutton = document.createElement("input");
         var addbutton2 = document.createElement("input");
+        var todoDiv = document.createElement("div");
+
+
+
+        left.appendChild(todoDiv).setAttribute("id", "todoDiv" + counter);
+        left.appendChild(todoDiv).setAttribute("class", "todoDiv");
+
+
 
         // ADD
-        left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox dataFloat");
-        left.appendChild(addnewtodo).setAttribute("value", addtextbox.value);
-        left.appendChild(addnewtodo).setAttribute("disabled", "");
-        left.appendChild(addnewtodo).setAttribute("id", "specialtextbox" + counter);
+        todoDiv.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox dataFloat");
+        todoDiv.appendChild(addnewtodo).setAttribute("value", addtextbox.value);
+        todoDiv.appendChild(addnewtodo).setAttribute("disabled", "");
+        todoDiv.appendChild(addnewtodo).setAttribute("id", "specialtextbox" + counter);
         addtextbox.value = "";
         // EDITOK
-        left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton editButton btn-float left")
-        left.appendChild(addbutton).setAttribute("type", "button");
-        left.appendChild(addbutton).setAttribute("id", "editOk" + counter);
-        left.appendChild(addbutton).setAttribute("value", "EDIT");
+        todoDiv.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton editButton btn-float left");
+        todoDiv.appendChild(addbutton).setAttribute("type", "button");
+        todoDiv.appendChild(addbutton).setAttribute("id", "editOk" + counter);
+        todoDiv.appendChild(addbutton).setAttribute("value", "EDIT");
         // DELDONE
-        left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton btn-float")
-        left.appendChild(addbutton2).setAttribute("type", "button");
-        left.appendChild(addbutton2).setAttribute("id", "delDone" + counter);
-        left.appendChild(addbutton2).setAttribute("value", "DONE");
+        todoDiv.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton btn-float");
+        todoDiv.appendChild(addbutton2).setAttribute("type", "button");
+        todoDiv.appendChild(addbutton2).setAttribute("id", "delDone" + counter);
+        todoDiv.appendChild(addbutton2).setAttribute("value", "DONE");
 
 
         //EDITOK EVENT LISTENER START
         var specialtextbox = document.querySelector("#specialtextbox" + counter);
         var editOk = document.querySelector("#editOk" + counter);
         var delDone = document.querySelector("#delDone" + counter);
-
-
-
-
-
-
-
-
-        document.querySelector("#specialtextbox" + counter).addEventListener("mouseover", function(){
-        document.querySelector("#editOk" + counter).classList.toggle("editButton");
-        document.querySelector("#delDone" + counter).classList.toggle("doneButton");
-        });
-
-
-
-
-
-
-
 
 
         editOk.addEventListener("click", function() {
@@ -95,95 +84,154 @@ addbtn.addEventListener("click", function() {
         var specialtextbox = document.querySelector("#specialtextbox" + counter);
         var editOk = document.querySelector("#editOk" + counter);
         var delDone = document.querySelector("#delDone" + counter);
-        delDone.addEventListener("click", function() {
-            if (delDone.value == "DEL") {
-                //deletes specialtextbox, editok button and deldone button
+        var divCount = document.querySelector("#div" + counter);
 
-                document.querySelector("#left").removeChild(specialtextbox);
-                document.querySelector("#left").removeChild(editOk);
-                document.querySelector("#left").removeChild(delDone);
+
+        delDone.addEventListener("click", function(event) {
+counter++;
+            if (delDone.value == "DEL") {
+
+                var deletableDiv = event.target.parentElement;
+                deletableDiv.remove();
+
 
             } else {
+                var deletableDiv = event.target.parentElement;
+                deletableDiv.remove();
+
+
+
                 var add = document.createElement("input");
                 var addbutton3 = document.createElement("input");
                 var addbutton4 = document.createElement("input");
-                counter++;
+                var doneDiv = document.createElement("div");
+                var todoDiv = document.querySelector("#todoDiv");
 
-                //deletes specialtextbox, editok button and deldone button
-                document.querySelector("#left").removeChild(specialtextbox);
-                document.querySelector("#left").removeChild(editOk);
-                document.querySelector("#left").removeChild(delDone);
+
                 //creates doneitem textbox to (right) and adds value from specialtextbox(left)
-                right.appendChild(add).setAttribute("id", "doneitem" + counter);
-                right.appendChild(add).setAttribute("class", "form-control styleDone dataFloat");
-                right.appendChild(add).setAttribute("disabled", "");
-                right.appendChild(add).setAttribute("value", specialtextbox.value);
-                right.appendChild(add).setAttribute("title", "Can't edit a done item.");
+                right.appendChild(doneDiv).setAttribute("id", "doneDiv" + counter);
+                doneDiv.appendChild(add).setAttribute("id", "doneitem" + counter);
+                doneDiv.appendChild(add).setAttribute("class", "form-control styleDone dataFloat");
+                doneDiv.appendChild(add).setAttribute("disabled", "");
+                doneDiv.appendChild(add).setAttribute("value", specialtextbox.value);
+                doneDiv.appendChild(add).setAttribute("title", "Can't edit a done item.");
                 //creates undo button on (right)
+<<<<<<< HEAD
                 right.appendChild(addbutton3).setAttribute("type", "button");
                 right.appendChild(addbutton3).setAttribute("class", "btn btn-default styleButton btn-float left");
                 right.appendChild(addbutton3).setAttribute("value", "UNDO");
                 right.appendChild(addbutton3).setAttribute("id", "undoButton" + counter);
                 right.appendChild(addbutton3).setAttribute("title", "Click here to undo this item.");
+=======
+                doneDiv.appendChild(addbutton3).setAttribute("type", "button");
+                doneDiv.appendChild(addbutton3).setAttribute("class", "btn btn-default styleButton btn-float left");
+                doneDiv.appendChild(addbutton3).setAttribute("value", "UNDO");
+                doneDiv.appendChild(addbutton3).setAttribute("id", "undoButton" + counter);
+                doneDiv.appendChild(addbutton3).setAttribute("title", "Click here to undo this item.");
 
-                right.appendChild(addbutton4).setAttribute("class", "btn btn-default styleButton doneButton btn-float");
-                right.appendChild(addbutton4).setAttribute("type", "button");
-                right.appendChild(addbutton4).setAttribute("id", "del" + counter);
-                right.appendChild(addbutton4).setAttribute("value", "DEL");
+                doneDiv.appendChild(addbutton4).setAttribute("class", "btn btn-default styleButton doneButton btn-float");
+                doneDiv.appendChild(addbutton4).setAttribute("type", "button");
+                doneDiv.appendChild(addbutton4).setAttribute("id", "del" + counter);
+                doneDiv.appendChild(addbutton4).setAttribute("value", "DEL");
+
+
+
+>>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
+
 
                 //UNDO EVENT LISTENER START
                 var undoButton = document.querySelector("#undoButton" + counter);
                 var delButton = document.querySelector("#del" + counter);
                 var doneTextbox = document.querySelector("#doneitem" + counter);
                 var doneitem = document.querySelector("#doneitem");
-                undoButton.addEventListener("click", function() {
+                // var todoDiv = document.querySelector("#div" + counter);
+                var todoDiv = document.createElement("div");
 
+
+
+
+                undoButton.addEventListener("click", function(event) {
 
                     //deletes doneitem, undo and del button from right
+                    var deletableDiv = event.target.parentElement;
+                    deletableDiv.remove();
 
-                    right.removeChild(doneTextbox);
-                    right.removeChild(delButton);
-                    right.removeChild(undoButton);
-
-                    //creates specialtextbox, editok and deldone button
-
-                    left.appendChild(addnewtodo).setAttribute("disabled", "");
-                    left.appendChild(addnewtodo).setAttribute("id", "specialtextbox" + counter);
-                    left.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox dataFloat");
-                    left.appendChild(addnewtodo).setAttribute("value", doneTextbox.value);
-
+<<<<<<< HEAD
                     left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton btn-float left")
                     left.appendChild(addbutton).setAttribute("type", "button");
                     left.appendChild(addbutton).setAttribute("id", "editOk" + counter);
                     left.appendChild(addbutton).setAttribute("value", "EDIT");
+=======
+>>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
 
-                    left.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton btn-float")
-                    left.appendChild(addbutton2).setAttribute("type", "button");
-                    left.appendChild(addbutton2).setAttribute("id", "delDone" + counter);
-                    left.appendChild(addbutton2).setAttribute("value", "DONE");
+                    //creates specialtextbox, editok and deldone button
+                    left.appendChild(todoDiv).setAttribute("id", "todoDiv" + counter);
+
+                    todoDiv.appendChild(addnewtodo).setAttribute("disabled", "");
+                    todoDiv.appendChild(addnewtodo).setAttribute("id", "specialtextbox" + counter);
+                    todoDiv.appendChild(addnewtodo).setAttribute("class", "form-control styleTextbox dataFloat");
+                    todoDiv.appendChild(addnewtodo).setAttribute("value", doneTextbox.value);
+
+                    todoDiv.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton btn-float left")
+                    todoDiv.appendChild(addbutton).setAttribute("type", "button");
+                    todoDiv.appendChild(addbutton).setAttribute("id", "editOk" + counter);
+                    todoDiv.appendChild(addbutton).setAttribute("value", "EDIT");
+
+                    todoDiv.appendChild(addbutton2).setAttribute("class", "btn btn-default styleButton doneButton btn-float")
+                    todoDiv.appendChild(addbutton2).setAttribute("type", "button");
+                    todoDiv.appendChild(addbutton2).setAttribute("id", "delDone" + counter);
+                    todoDiv.appendChild(addbutton2).setAttribute("value", "DONE");
                 });
 
                 //delButton {right} EVENT LISTENER START
-                delButton.addEventListener("click", function() {
-                    right.removeChild(doneTextbox);
-                    right.removeChild(delButton);
-                    right.removeChild(undoButton);
+                delButton.addEventListener("click", function(event) {
+                    var deletableDiv = this.parentElement;
+                    deletableDiv.remove();
+
+
                 });
             }
         });
         //DELDONE EVENT LISTENER END
     }
 });
+var leftnoitem = document.querySelector("#leftnoitem");
+var addtextbox = document.querySelector("#addtodo");
+var specialtextbox = document.querySelector("#specialtextbox" + counter);
+var editButton = document.querySelector(".editButton");
+
+if (left.contains(editButton) == true) {
+    leftnoitem.setAttribute("class", "hidethis");
+} else {
+    leftnoitem.removeAttribute("class", "hidethis");
+}
 
 
 
-// var specialtextbox =  document.querySelector("#specialtextbox" + counter);
-// var edit = document.querySelector("#editOk" + counter);
 
 
 
 
+// var editButton = document.querySelector(".editButton");
+// var doneButton = document.querySelector(".doneButton");
+// var todoDiv = document.querySelector(".todoDiv");
+// var title = document.querySelector("#title");
 
+// todoDiv.addEventListener("mouseover", function(){
+// editButton.classList.toggle("editButton");
+// doneButton.classList.toggle("doneButton");
+// });
+
+
+
+
+// var leftnoitem = document.querySelector("#leftnoitem");
+// var todoDiv = document.querySelector(".todoDiv");
+// var isTrue = (left.contains(todoDiv) != true);
+
+// if (todoDiv == prese){
+//     leftnoitem.setAttribute("class", "hidethis");
+// }
 
 
 

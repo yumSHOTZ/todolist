@@ -14,7 +14,7 @@ body {
 
 }
 
-#date{
+#dateToday{
     font-family: "Sans-serif";
     font-size: 16px;
     text-align: center;
@@ -90,7 +90,11 @@ input {
     width: 54px;
 }
 
-
+#addbtn{ 	margin-left:10px;
+			height:50px;
+			background-color: #e6ebf2;
+			width:54px;
+		}
 
 #specialbutton {
     margin-left: 10px;
@@ -130,7 +134,10 @@ input {
 
     #left,
     #right {
-        width: 100%;
+        width: 99%;
+    }
+    #container{
+    	padding: auto;
     }
 }
 
@@ -138,6 +145,19 @@ input {
 	body{
 		width: 100%;
 	}
+}
+
+@media only screen and (max-width: 1353px){
+	.textFloat{
+		margin-right: 1%;
+	}
+}
+
+@media only screen and (max-width: 750px){
+	#left,
+    #right {
+        margin-left: 2px;
+    }
 }
 
 .footer {
@@ -175,16 +195,6 @@ input {
     margin-bottom: 0px;
 }
 
-.editButton {
-	display:none;
-}
-
-.doneButton {
-	display:none;
-}
-
-
-/*@media ( hover:hover ) { testbtn:hover { color:white; } }*/
 .textInput{
 
 }
@@ -199,16 +209,35 @@ input {
 }
 
 .txtFloat{
+	width: 95%;
+	float: left;
+	padding-right: 20px
+}
+
+
+.dataFloat{
+	width: 100%;
 	width: 100%;
 	float: left;
-	padding-right: 9%;
+	padding-right:62px;
+
 }
 
 <<<<<<< HEAD
-.dataFloat{
-	width: 100%;
-	float: left;
-	padding-right: 50px;
-}
+#date{
+	margin-top: -87px;
+	float: right;
+	border-width: 0px 0px 1px 0px;
+	border-color: black;
 =======
->>>>>>> e60d1f2a0840f3c2d51eaedbc70d6d204873f69e
+.hidethis {
+    display:none;
+}
+
+.editButton{
+    display:none;
+}
+.doneButton{
+    display: none
+>>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
+}
