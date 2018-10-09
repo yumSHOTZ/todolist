@@ -203,3 +203,14 @@ input {
 	float: left;
 	padding-right: 50px;
 }
+
+.hidethis {
+    display:none;
+}
+
+.editButton{
+    display:none;
+}
+.doneButton{
+    display: none
+}
