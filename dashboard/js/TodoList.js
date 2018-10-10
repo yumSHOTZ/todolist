@@ -116,13 +116,7 @@ counter++;
                 doneDiv.appendChild(add).setAttribute("value", specialtextbox.value);
                 doneDiv.appendChild(add).setAttribute("title", "Can't edit a done item.");
                 //creates undo button on (right)
-<<<<<<< HEAD
-                right.appendChild(addbutton3).setAttribute("type", "button");
-                right.appendChild(addbutton3).setAttribute("class", "btn btn-default styleButton btn-float left");
-                right.appendChild(addbutton3).setAttribute("value", "UNDO");
-                right.appendChild(addbutton3).setAttribute("id", "undoButton" + counter);
-                right.appendChild(addbutton3).setAttribute("title", "Click here to undo this item.");
-=======
+
                 doneDiv.appendChild(addbutton3).setAttribute("type", "button");
                 doneDiv.appendChild(addbutton3).setAttribute("class", "btn btn-default styleButton btn-float left");
                 doneDiv.appendChild(addbutton3).setAttribute("value", "UNDO");
@@ -136,7 +130,7 @@ counter++;
 
 
 
->>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
+
 
 
                 //UNDO EVENT LISTENER START
@@ -156,13 +150,6 @@ counter++;
                     var deletableDiv = event.target.parentElement;
                     deletableDiv.remove();
 
-<<<<<<< HEAD
-                    left.appendChild(addbutton).setAttribute("class", "btn btn-default styleButton btn-float left")
-                    left.appendChild(addbutton).setAttribute("type", "button");
-                    left.appendChild(addbutton).setAttribute("id", "editOk" + counter);
-                    left.appendChild(addbutton).setAttribute("value", "EDIT");
-=======
->>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
 
                     //creates specialtextbox, editok and deldone button
                     left.appendChild(todoDiv).setAttribute("id", "todoDiv" + counter);
@@ -200,11 +187,11 @@ var addtextbox = document.querySelector("#addtodo");
 var specialtextbox = document.querySelector("#specialtextbox" + counter);
 var editButton = document.querySelector(".editButton");
 
-if (left.contains(editButton) == true) {
-    leftnoitem.setAttribute("class", "hidethis");
-} else {
-    leftnoitem.removeAttribute("class", "hidethis");
-}
+// if (left.contains(editButton) == true) {
+//     leftnoitem.setAttribute("class", "hidethis");
+// } else {
+//     leftnoitem.removeAttribute("class", "hidethis");
+// }
 
 
 
