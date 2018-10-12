@@ -9,6 +9,8 @@ var minDate = document.querySelector("#date");
 //for date variables
 
 
+
+
 addbtn.addEventListener("click", function() {
     addtextbox.focus();
     var re = /A-Za-z/
@@ -16,6 +18,12 @@ addbtn.addEventListener("click", function() {
         alert("Please input a todo item before submitting");
         addtextbox.focus();
     } else {
+        var nd = document.querySelector('#left').querySelector('#date').value;
+        var getTime = new Date(nd);
+        var ranId = Math.floor(Math.random() * 1000000000);
+
+        newTodo(ranId, addtextbox.value, getTime.getTime());
+
         // if (true) {}
         counter++;
         var addnewtodo = document.createElement("input");
@@ -27,6 +35,8 @@ addbtn.addEventListener("click", function() {
 
         left.appendChild(todoDiv).setAttribute("id", "todoDiv" + counter);
         left.appendChild(todoDiv).setAttribute("class", "todoDiv");
+        left.appendChild(todoDiv).setAttribute("value", ranId)
+        
 
 
 
@@ -345,6 +355,7 @@ apiRequest().then(function(data) {
 
 
 
+
 // else {
 //    var deletableDiv = event.target.parentElement;
 //    deletableDiv.remove();
@@ -435,7 +446,7 @@ function renderinMoto(data,i) {
                 }
                  var todo = todos.find((todo) => todo.id === divID); //<-- si Vic gumagawa ni to kung baga yan ung alternative at madalas na siguro gamitin for comparing kesa sa loooping
                  if(todo.title !== ableTextbox.value) { //< eto na ung condition
-                    updateAPI(ableTextbox.value, divID); //<-- eto na ung nag.input ka na sa variable nang function
+                    updateAPI(ableTextbox.value, divID, todo.timestamp, todo.status); //<-- eto na ung nag.input ka na sa variable nang function                    
                  }
             
                     // if(compare != ableTextbox.value){
@@ -500,10 +511,11 @@ function renderinMoto(data,i) {
     
 }
 
-function updateAPI(updateValue, id) { //<--- eto ung mga request variable or variable na as is
+function updateAPI(updateValue, id, time, status) { //<--- eto ung mga request variable or variable na as is
     var url = "http://localhost:3000/todos/" + id; //<--- ID ung specific object
-    console.log('update value', updateValue);
-    var changed = {"title": updateValue}; //<--- ung papalitan o ung changes
+    var changed = {"title": updateValue,
+                    "timestamp": time,
+                    "status": status}; //<--- ung papalitan o ung changes
 
     fetch(url, {
         method: "PUT",  //<--- eto ung request para maupdate
@@ -512,8 +524,8 @@ function updateAPI(updateValue, id) { //<--- eto ung mga request variable or var
             "Content-Type": "application/json" // <--- don't forget this! mahalaga to
         }
     }).then(function(response){ //<-- eto na ung response
-        console.log(response);
         return response.json();
+
     });
 }
 
@@ -554,7 +566,7 @@ function createDone(apidata, i){
                     //UNDO EVENT LISTENER START
                     var doneElem = document.querySelector('#doneDiv');
                     var undoButton = doneDiv.querySelector("#undoButton");
-                    console.log(undoButton)
+                    // console.log(undoButton)
                     var delButton = doneDiv.querySelector("#del");
                     // var doneTextbox = doneElem.querySelector("#doneitem");
                     // var doneitem = document.querySelector("#doneitem");
@@ -612,5 +624,30 @@ function createDone(apidata, i){
 
                     });
 }
-//after mo mabasa dito punta ka nang line 428
+// after mo mabasa dito punta ka nang line 428
 
+function newTodo(id, title, timestamp){
+
+       var todoDetails = {
+                "title": title,
+                "timestamp": timestamp,
+                "status": "todo",
+                "userid": null,
+                "id": id
+        }
+
+
+    fetch("http://localhost:3000/todos", {
+            method: "POST",
+            mode: "cors",
+            cache: "no-cache",
+            credentials: "same-origin",
+            headers: {
+                'Content-Type': "application/json; charset=utf-8"},
+            redirect: "follow",
+            referrer: "no-referrer",
+            body: JSON.stringify(todoDetails)
+        }).then(function(response){ return response.json();});
+}
+
+console.log(putOnload(data));
