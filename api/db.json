@@ -1,10 +1,9 @@
 {
   "todos": [
     {
-      "title": "Buy New Car",
+      "title": "yawa",
       "timestamp": 192389282983,
       "status": "todo",
-      "userid": "",
       "id": "9406077550653422"
     },
     {
@@ -48,6 +47,13 @@
       "status": "todo",
       "userid": null,
       "id": 532972048
+    },
+    {
+      "title": "wawa",
+      "timestamp": 1540944000000,
+      "status": "done",
+      "userid": null,
+      "id": 531968376
     }
   ]
 }
