@@ -323,13 +323,22 @@ function apiRequest() {
 // console.log(getFetch);
 
 apiRequest().then(function(data) {
-
     todos = data;
-    renderinMoto(todos);
+    var todo = todos.find((todo) => todo.status === "todo");
+    // console.log(todos.length)
+    for(var i = 0 ; i <= todos.length - 1; i++){
+        console.log(todos[i].status == "todo")
+        if (todos[i].status == "todo") {
+            renderinMoto(todos,i);
+        }
 
+        else
+             createDone(todos,i);
 
+    }
 
-});
+ 
+   });
 
 
 
@@ -352,11 +361,10 @@ apiRequest().then(function(data) {
 
 var counting = 0;
 /////API data render
-function renderinMoto(data) {
-    for (var i = 0; i < data.length; i++) {
+function renderinMoto(data,i) {
         var api = data;
         var objId = api[i]['id'];
-        var todoValue = api[i]['title'];
+        var todoValue = api[i].title;
         console.log(todoValue);
 
         // if (true) {}
@@ -479,10 +487,39 @@ function renderinMoto(data) {
 
                 //     console.log(event)
 
+                createDone();
+
                 // }
 
                 // function{
-                    var doneTextbox = document.createElement("input");
+                    
+                // }
+            }
+        })
+
+    
+}
+
+function updateAPI(updateValue, id) { //<--- eto ung mga request variable or variable na as is
+    var url = "http://localhost:3000/todos/" + id; //<--- ID ung specific object
+    console.log('update value', updateValue);
+    var changed = {"title": updateValue}; //<--- ung papalitan o ung changes
+
+    fetch(url, {
+        method: "PUT",  //<--- eto ung request para maupdate
+        body: JSON.stringify(changed), //<--- eto ung change na nasa variable na inistringify para maconvert to string
+        headers: {
+            "Content-Type": "application/json" // <--- don't forget this! mahalaga to
+        }
+    }).then(function(response){ //<-- eto na ung response
+        console.log(response);
+        return response.json();
+    });
+}
+
+
+function createDone(apidata, i){
+    var doneTextbox = document.createElement("input");
                     var addbutton3 = document.createElement("input");
                     var addbutton4 = document.createElement("input");
                     var doneDiv = document.createElement("div");
@@ -494,7 +531,7 @@ function renderinMoto(data) {
                     doneDiv.appendChild(doneTextbox).setAttribute("id", "doneitem");
                     doneDiv.appendChild(doneTextbox).setAttribute("class", "form-control styleDone dataFloat");
                     doneDiv.appendChild(doneTextbox).setAttribute("disabled", "");
-                    doneDiv.appendChild(doneTextbox).setAttribute("value", ableTextbox.value);
+                    doneDiv.appendChild(doneTextbox).setAttribute("value", apidata[i].title);
                     doneDiv.appendChild(doneTextbox).setAttribute("title", "Can't edit a done item.");
                     //creates undo button on (right)
 
@@ -524,7 +561,7 @@ function renderinMoto(data) {
                     // var todoDiv = document.querySelector("#div" + counter);
                     // var todoDiv = document.createElement("div");
                     var createDiv = document.createElement('div');
-                    var selectTodo = todoDiv
+                    // var selectTodo = todoDiv
 
 
 
@@ -574,29 +611,6 @@ function renderinMoto(data) {
 
 
                     });
-                // }
-            }
-        })
-
-    }
 }
-
-function updateAPI(updateValue, id) { //<--- eto ung mga request variable or variable na as is
-    var url = "http://localhost:3000/todos/" + id; //<--- ID ung specific object
-    console.log('update value', updateValue);
-    var changed = {title: updateValue}; //<--- ung papalitan o ung changes
-
-    fetch(url, {
-        method: "PUT",  //<--- eto ung request para maupdate
-        body: JSON.stringify(changed), //<--- eto ung change na nasa variable na inistringify para maconvert to string
-        headers: {
-            "Content-Type": "application/json" // <--- don't forget this! mahalaga to
-        }
-    }).then(function(response){ //<-- eto na ung response
-        console.log(response);
-        return response.json();
-    });
-}
-
 //after mo mabasa dito punta ka nang line 428
 

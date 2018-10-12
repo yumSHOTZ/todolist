@@ -2,17 +2,24 @@
   "todos": [
     {
       "title": "Buy New Car",
-      "id": "9406077550653422"
+      "id": "9406077550653422",
+      "timestamp": 192389282983,
+      "status": "todo",
+      "userid": ""
     },
     {
       "id": "9774879209170680",
       "title": "aba",
-      "timestamp": 123367448
+      "timestamp": 123367448,
+      "status": "todo",
+      "userid": ""
     },
     {
       "id": "3349789516149872",
       "title": "Halimuyak",
-      "timestamp": 1232736722
+      "timestamp": 1232736722,
+      "status": "done",
+      "userid": ""
     }
   ],
   "towhat": [
