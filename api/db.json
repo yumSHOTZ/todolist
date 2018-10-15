@@ -1,52 +1,10 @@
 {
   "todos": [
     {
-      "title": "yawa",
-      "timestamp": 192389282983,
-      "status": "todo",
-      "id": "9406077550653422"
-    },
-    {
-      "title": "aba",
-      "timestamp": 123367448,
-      "status": "todo",
-      "userid": "",
-      "id": "9774879209170680"
-    },
-    {
-      "title": "Halimuyak",
-      "timestamp": 1232736722,
-      "status": "done",
-      "userid": "",
-      "id": "3349789516149872"
-    },
-    {
-      "title": "Wellplayed",
-      "timestamp": 192389282983,
-      "status": "done",
-      "userid": null,
-      "id": 94060775502928300
-    },
-    {
-      "title": "hahahahahahahah",
+      "title": "mas new to",
       "timestamp": 1539302400000,
       "status": "todo",
-      "userid": null,
-      "id": 885670757
-    },
-    {
-      "title": "mas new",
-      "timestamp": 1539302400000,
-      "status": "todo",
-      "userid": null,
       "id": 41834192
-    },
-    {
-      "title": "yes boy ",
-      "timestamp": 1539302400000,
-      "status": "todo",
-      "userid": null,
-      "id": 532972048
     },
     {
       "title": "wawa",
