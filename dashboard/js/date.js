@@ -1,6 +1,7 @@
 document.getElementById('body').onload = function() { currentDate() };
 
 function currentDate() {
+	document.querySelector("#addtodo").value = "";
     var d = new Date();
 
     var today = d.getDay();
@@ -39,6 +40,4 @@ function currentDate() {
    			document.getElementById('date').setAttribute('min', year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0'));
     		document.getElementById('date').value = year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0');
    	}
-
-   	document.querySelector("#left").value = "";
 }
