@@ -23,11 +23,12 @@ addbtn.addEventListener("click", function() {
         var nd = document.querySelector('#left').querySelector('#date').value;
         var getTime = new Date(nd);
         var ranId = Math.floor(Math.random() * 1000000000);
-        console.log(ranId)
 
         changeAdd(ranId, addtextbox.value, getTime.getTime());
 
         addTodo(addtextbox.value, ranId);
+        document.querySelector(".noContentl").setAttribute("style","display:none");
+
 
         addtextbox.value = "";
         // if (true) {}
@@ -199,10 +200,7 @@ addbtn.addEventListener("click", function() {
         //DELDONE EVENT LISTENER END
     }
 });
-var leftnoitem = document.querySelector("#leftnoitem");
-var addtextbox = document.querySelector("#addtodo");
-var specialtextbox = document.querySelector("#specialtextbox" + counter);
-var editButton = document.querySelector(".editButton");
+
 
 // if (left.contains(editButton) == true) {
 //     leftnoitem.setAttribute("class", "hidethis");
@@ -425,8 +423,8 @@ function renderData(data, i) {
             }
 
             // var todo = todos.find((todo) => todo.id === divID); //<-- si Vic gumagawa ni to kung baga yan ung alternative at madalas na siguro gamitin for comparing kesa sa loooping
-            for (var i = 0; i<todos.length; i++){
-                if(todos[i].id == divID){
+            for (var i = 0; i < todos.length; i++) {
+                if (todos[i].id == divID) {
                     var todo = todos[i];
                     console.log("ako si todos", todo.id)
                     if (todo.title !== ableTextbox.value) {
@@ -487,7 +485,15 @@ function renderData(data, i) {
             console.log("else")
 
             // function(event) {
+            var btnID = this.value;
 
+            for (var i = 0; i < todos.length; i++) {
+                if (todos[i].id == divID) {
+                    console.log("true")
+                    doneUndo(divID, ableTextbox.value, todos[i].timestamp, btnID);
+                }
+            }
+            document.querySelector(".noContentr").setAttribute("style","display:none");
 
             console.log("create new")
             clickDone(ableTextbox.value, divID);
@@ -503,7 +509,7 @@ function renderData(data, i) {
 
 }
 
-function addTodo(todo, id){
+function addTodo(todo, id) {
 
     // if (true) {}
     var addnewtodo = document.createElement("input");
@@ -563,19 +569,19 @@ function addTodo(todo, id){
             switchEO.setAttribute("value", "OK");
             switchDL.setAttribute("value", "DEL");
             ableTextbox.focus();
+            console.log(divID)
             console.log('if')
-            // console.log(specialtextbox, counter);
+
         } else {
             // EDIT VALIDATION
             if (ableTextbox.value == "") {
                 alert('Cannot leave blank.');
                 ableTextbox.focus();
-            console.log(divID)
                 return false;
             }
 
-            for (var i = 0; i<todos.length; i++){
-                if(todos[i].id == divID){
+            for (var i = 0; i < todos.length; i++) {
+                if (todos[i].id == divID) {
                     var todo = todos[i];
                     console.log("ako si todos", todo.id)
                     if (todo.title !== ableTextbox.value) {
@@ -585,11 +591,6 @@ function addTodo(todo, id){
                 }
             }
 
-            // if(compare != ableTextbox.value){
-            //     console.log(compare + " " + i)
-            //               updateAPI(ableTextbox.value, divID);
-
-            // }
 
             console.log('else')
             ableTextbox.setAttribute("disabled", "");
@@ -601,6 +602,7 @@ function addTodo(todo, id){
 
 
     });
+
     //EDITOK EVENT LISTENER END
 
 
@@ -616,25 +618,37 @@ function addTodo(todo, id){
         var ableTextbox = event.target.parentElement.firstChild;
         var switchDL = event.target;
         var switchEO = event.target.previousSibling;
-        var divID = this.parentElement.getAttribute("value");
+        var divID = event.target.parentElement.getAttribute("value");
+
+        console.log("delDone Begin")
+        console.log(this)
 
         if (switchDL.value == "DEL") {
 
             var deletableDiv = event.target.parentElement;
             deletableDiv.remove();
-            console.log("if")
+            console.log("if Del")
             deleteData(divID);
-            console.log(divID);
+            console.log(doneDiv);
 
 
         } else {
             var deletableDiv = event.target.parentElement;
             deletableDiv.remove();
-            console.log("else")
+            console.log(todos)
 
             // function(event) {
+            var btnID = this.value;
 
-            console.log("create done")
+            for (var i = 0; i < todos.length; i++) {
+                if (todos[i].id == divID) {
+                    console.log("true")
+                    doneUndo(divID, ableTextbox.value, todos[i].timestamp, btnID);
+                }
+                console.log(todos[i].id + " " + divID)
+            }
+            document.querySelector(".noContentr").setAttribute("style","display:none");
+            console.log("create new")
             clickDone(ableTextbox.value, divID);
 
             // }
@@ -644,9 +658,8 @@ function addTodo(todo, id){
             // }
         }
     })
-
-
 }
+
 
 
 
@@ -702,14 +715,21 @@ function loadDone(apidata, i) {
 
         //deletes doneitem, undo and del button from right
         // var todoDiv = document.createElement('div');
-        var doneTextbox = event.target.previousSibling.value;
+        var doneTextbox = event.target.previousSibling;
 
         var deletableDiv = event.target.parentElement;
         deletableDiv.remove();
+        var btnID = this.value;
 
         var divID = event.target.parentElement.getAttribute("value");
         // addTodo()
-        addTodo(doneTextbox, divID);
+        for (var i = 0; i < todos.length; i++) {
+            if (todos[i].id == divID) {
+                console.log("true")
+                doneUndo(divID, doneTextbox.value, todos[i].timestamp, btnID);
+            }
+        }
+        addTodo(doneTextbox.value, divID);
 
 
 
@@ -838,8 +858,20 @@ function clickDone(data, id) {
         deletableDiv.remove();
 
         var divID = this.parentElement.getAttribute("value");
+
+        var btnID = this.value;
+
+        for (var i = 0; i < todos.length; i++) {
+            if (todos[i].id == divID) {
+                console.log("true")
+                doneUndo(divID, doneTextbox.value, todos[i].timestamp, btnID);
+            }
+        }
+
+
+
         addTodo(doneTextbox.value, divID)
-        
+
 
 
         // creates specialtextbox, editok and deldone button
@@ -875,6 +907,8 @@ function clickDone(data, id) {
     delButton.addEventListener("click", function(event) {
         var deletableDiv = this.parentElement;
         deletableDiv.remove();
+        var divID = this.parentElement.getAttribute('value');
+        deleteData(divID);
 
 
     });
@@ -894,15 +928,14 @@ apiRequest().then(function(data) {
     for (var i = 0; i <= todos.length - 1; i++) {
         if (todos[i].status == "todo") {
             console.log("true")
-            document.querySelector(".noContentl").setAttribute('style','display:none;');
+            document.querySelector(".noContentl").setAttribute('style', 'display:none;');
             renderData(todos, i);
             continue;
-        } 
-        else
+        } else
             console.log("false")
-            loadDone(todos, i);
-            document.querySelector(".noContentr").setAttribute('style','display:none;');
-        }
+        loadDone(todos, i);
+        document.querySelector(".noContentr").setAttribute('style', 'display:none;');
+    }
 
     return todos = data;
 });
@@ -919,19 +952,13 @@ function apiRequest() {
 
 function changeAdd(id, title, timestamp) {
 
-    var del = document.querySelector("#delDone").value;
-    var status = "todo";
-
-    if (del == "DONE") {
-        status = "done";
-    }
     console.log(this.value)
 
 
     var todoDetails = {
         "title": title,
         "timestamp": timestamp,
-        "status": status,
+        "status": "todo",
         "userid": null,
         "id": id
     }
@@ -951,18 +978,43 @@ function changeAdd(id, title, timestamp) {
     }).then(function(response) { return response.json(); });
 }
 
-function deleteData(id) {
 
-    var del = document.querySelector("#delDone").value;
+function doneUndo(id, title, timestamp, btn) {
+
     var status = "todo";
 
-    if (del == "DONE") {
+    if (btn == "DONE") {
         status = "done";
     }
+    console.log(status);
+
+    var url = "http://localhost:3000/todos/" + id; //<--- ID ung specific object
+    var changed = {
+        "title": title,
+        "timestamp": timestamp,
+        "status": status
+    }; //<--- ung papalitan o ung changes
+
+    fetch(url, {
+        method: "PUT", //<--- eto ung request para maupdate
+        body: JSON.stringify(changed), //<--- eto ung change na nasa variable na inistringify para maconvert to string
+        headers: {
+            "Content-Type": "application/json" // <--- don't forget this! mahalaga to
+        }
+    }).then(function(response) { //<-- eto na ung response
+        return response.json();
+    });
+
+
+}
+
+
+function deleteData(id) {
+
     console.log(status)
 
-    fetch("http://localhost:3000/todos/" + id, { 
-        method: "DELETE" 
+    fetch("http://localhost:3000/todos/" + id, {
+        method: "DELETE"
     }).then(function(response) { console.log(response); return response.json(); });
     console.log(id)
 }
