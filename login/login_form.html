@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List - Login</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../style/style.css">
+    <script src="account_validation.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.formField {
+			/*width: 340px;*/
+			margin: 150px auto;
+		}
+		  .btn-default{
+            border-width: 0px;
+        }
+         .btn:hover{
+            background-color: #c5d6ef;
+        }
+
+	</style>
+
+</head>
+<body>
+<div class="content">
+
+	<div class="background"></div>
+
+	<div class="formField">
+		<form action="" method="post" style="" onsubmit="return loginProcess(this)">
+			<h2 class="text-center">Log in</h2>
+			<div class="form-group">
+				<input class="form-control" maxlength="16" minlength="6" placeholder="Username" id="uname"  type="text" pattern="[A-Za-z]{6,16}">
+			</div>
+			<div class="form-group">
+				<input class="form-control" placeholder="Password" maxlength="16" id="password" type="password">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-default btn-block">Log in</button>
+			</div>
+			<div class="clearfix">
+				<span class="text-center"><a href="registration_form.html">Create an Account</a></span>
+				<a href="forgot_password.html" class="pull-right text-center">Forgot Password?</a>
+			</div>
+		</form>
+
+	</div>
+
+</div>
+
+</div>
+</body>
+</html>
