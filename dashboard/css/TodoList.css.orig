@@ -43,7 +43,7 @@ body {
 
 #right {
     padding-top: 2%;
-    padding-bottom: 20px;
+    padding-bottom: 10%;
     padding-left: 5%;
     padding-right: 5%;
     /*margin-left:10px;*/
@@ -199,14 +199,9 @@ input {
 
 }
 
-.noContentl{
+.noContent{
 	width: 100%; text-align: center; margin-top: 120px;float: left; font-size: 32px; opacity: .4;
 }
-
-.noContentr{
-	width: 100%; text-align: center; margin-top: 180px;float: left; font-size: 32px; opacity: .4;
-}
-
 
 .btn-float{
 	float: right;
@@ -228,9 +223,21 @@ input {
 
 }
 
+<<<<<<< HEAD
 #date{
 	margin-top: -87px;
 	float: right;
 	border-width: 0px 0px 1px 0px;
 	border-color: black;
+=======
+.hidethis {
+    display:none;
+}
+
+.editButton{
+    display:none;
+}
+.doneButton{
+    display: none
+>>>>>>> 8fb625c08c22b19b309a26a240509e9ae1ccdd0a
 }
