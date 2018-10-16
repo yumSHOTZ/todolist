@@ -2,6 +2,7 @@ document.getElementById('body').onload = function() { currentDate() };
 
 function currentDate() {
     var d = new Date();
+   	document.querySelector("#addtodo").value = "";
 
     var today = d.getDay();
     var month = d.getMonth();
@@ -40,5 +41,4 @@ function currentDate() {
     		document.getElementById('date').value = year + "-" + newMonth.padStart(2, '0') + "-" + newDate.padStart(2, '0');
    	}
 
-   	document.querySelector("#left").value = "";
 }
