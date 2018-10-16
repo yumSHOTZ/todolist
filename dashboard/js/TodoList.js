@@ -9,6 +9,7 @@ var minDate = document.querySelector("#date");
 //for date variables
 var ranId = Math.floor(Math.random() * 1000000000);
 
+    document.querySelector("#left").value = "";
 
 
 
@@ -26,7 +27,10 @@ addbtn.addEventListener("click", function() {
 
         changeAdd(ranId, addtextbox.value, getTime.getTime());
 
+        todos.push({"title": addtextbox.value, "timestamp": getTime.getTime(),"id": ranId});
+
         addTodo(addtextbox.value, ranId);
+        
         document.querySelector(".noContentl").setAttribute("style","display:none");
 
 
@@ -952,7 +956,7 @@ function apiRequest() {
 
 function changeAdd(id, title, timestamp) {
 
-    console.log(this.value)
+    console.log(this)
 
 
     var todoDetails = {
